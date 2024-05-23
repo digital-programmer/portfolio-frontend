@@ -74,6 +74,17 @@ const config: Config = {
         950: "hsl(var(--accent-950))",
       },
     },
+    extend: {
+      animation: {
+        wiggle: "wiggle 3s ease-in-out infinite",
+      },
+      keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-90deg)" },
+          "50%": { transform: "rotate(90deg)" },
+        },
+      },
+    },
   },
   darkMode: "selector",
 };

@@ -39,6 +39,7 @@ export default function Navbar() {
             <Link href="/" scroll={false}>
                 <div className="flex items-center gap-2">
                     <Image
+                        className="animate-wiggle"
                         src={logo}
                         alt="Logo of digital programmer website"
                         width={36}
