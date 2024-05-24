@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className + ' bg-background-100 dark:bg-background-100 h-[2028px]'}>
         <Navbar/>
-        <main className="lg:max-w-screen-md lg:mx-auto w-full text-text-900 dark:text-text-900 text-base">
+        <main className="lg:max-w-screen-md lg:mx-auto w-full text-text-900 dark:text-text-900 text-sm md:text-base">
           {children}
         </main>
       </body>

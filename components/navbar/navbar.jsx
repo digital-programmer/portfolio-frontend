@@ -1,6 +1,7 @@
 "use client";
 
 import useDarkMode from "../../custom-hooks/toggleDarkMode";
+import useScrollDirection from "../../custom-hooks/scrollDirection";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../../public/logo.png";
@@ -10,6 +11,7 @@ const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export default function Navbar() {
     const [theme, setTheme] = useDarkMode();
+    const scrollDirection = useScrollDirection();
 
     function handleBtnClick() {
         if (theme === "dark") {
@@ -34,8 +36,11 @@ export default function Navbar() {
             </span>
         );
 
+
+    const finalPositionClass = scrollDirection === "down" ? "-top-48" : "top-0";
+
     return (
-        <nav className="flex md:space-between lg:max-w-screen-lg lg:mx-auto w-full items-center py-4 md:py-6 md:px-4 px-2">
+        <nav className={`flex md:space-between lg:max-w-screen-lg lg:mx-auto w-full items-center py-4 md:py-6 md:px-4 px-2 bg-background-100 dark:bg-background-100 transition-[top] duration-500 sticky ${finalPositionClass}`}>
             <Link href="/" scroll={false}>
                 <div className="flex items-center gap-2">
                     <Image
