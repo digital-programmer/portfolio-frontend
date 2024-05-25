@@ -6,7 +6,12 @@ import dynamic from "next/dynamic";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const Navbar = dynamic(() => import('../components/navbar/navbar'), { ssr: false })
+const Navbar = dynamic(() => import("../components/navbar/navbar"), {
+  ssr: false,
+  loading: () => <>
+    <div className="h-[68px] md:h-[84px]"></div>
+  </>,
+});
 
 export const metadata: Metadata = {
   title: "Digital Programmer",
@@ -20,8 +25,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className + ' bg-background-100 dark:bg-background-100 h-[2048px]'}>
-        <Navbar/>
+      <body
+        className={
+          inter.className +
+          " bg-background-100 dark:bg-background-100 h-[2048px]"
+        }
+      >
+        <Navbar />
         <main className="lg:max-w-screen-md lg:mx-auto w-full text-text-900 dark:text-text-900 text-sm md:text-base">
           {children}
         </main>
