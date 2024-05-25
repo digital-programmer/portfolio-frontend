@@ -28,12 +28,12 @@ export default function RootLayout({
       <body
         className={
           inter.className +
-          " bg-background-100 dark:bg-background-100 h-[2048px]"
+          " bg-background-100 dark:bg-background-100"
         }
       >
         <Navbar />
         <main className="lg:max-w-screen-md lg:mx-auto w-full text-text-900 dark:text-text-900 text-sm md:text-base">
-          {children}
+          <div className="min-h-screen flex flex-col p-4 md:p-8">{children}</div>
         </main>
       </body>
     </html>
