@@ -33,7 +33,7 @@ export default function RootLayout({
       >
         <Navbar />
         <main className="lg:max-w-screen-md lg:mx-auto w-full text-text-900 dark:text-text-900 text-sm md:text-base">
-          <div className="min-h-screen flex flex-col p-4 md:p-8">{children}</div>
+          <div className="min-h-screen flex flex-col p-2 md:p-4">{children}</div>
         </main>
       </body>
     </html>
