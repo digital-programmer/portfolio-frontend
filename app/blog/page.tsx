@@ -1,8 +1,9 @@
-export default function Blog() {
+import Blog from "@/components/blog/blog";
+
+export default async function BlogPage() {
+
   return (
-    <div className="text-text-900 dark:text-text-900">
-      Blog Page
-    </div>
+    <Blog/>
   );
 }
  

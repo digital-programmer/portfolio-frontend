@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import "./global_icons.css";
 import dynamic from "next/dynamic";
+import Footer from "@/components/footer/footer"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,8 +34,9 @@ export default function RootLayout({
       >
         <Navbar />
         <main className="lg:max-w-screen-md lg:mx-auto w-full text-text-900 dark:text-text-900 text-sm md:text-base">
-          <div className="min-h-screen flex flex-col p-2 md:p-4">{children}</div>
+          <div className="min-h-screen flex flex-col p-4 md:p-8">{children}</div>
         </main>
+        <Footer/>
       </body>
     </html>
   );

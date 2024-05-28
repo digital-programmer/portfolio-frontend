@@ -7,8 +7,8 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "../../public/logo.png";
 import { DM_Sans } from "next/font/google";
-
 const dmSans = DM_Sans({ subsets: ["latin"] });
+
 const logoClass =
     dmSans.className +
     " text-accent-500 dark:text-accent-500 text-sm md:text-base font-bold w-min leading-[14px] md:leading-[16px]";
@@ -69,7 +69,7 @@ export default function Navbar() {
 
     return (
         <nav
-            className={`flex md:space-between lg:max-w-screen-lg lg:mx-auto w-full items-center py-4 md:py-6 md:px-4 px-2 bg-background-100 dark:bg-background-100 transition-[top] duration-300 sticky ${finalPositionClass}`}
+            className={`flex md:justify-between lg:max-w-screen-lg lg:mx-auto w-full items-center py-4 md:py-6 md:px-4 px-2 bg-background-100 dark:bg-background-100 transition-[top] duration-300 sticky ${finalPositionClass}`}
         >
             <Link href="/" scroll={false}>
                 <div className="flex items-center gap-2">

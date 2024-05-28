@@ -1,15 +1,11 @@
+import client from "@/config/sanity.client";
+
 export default async function fetchCategories() {
-  // const options = {
-  //   headers: {
-  //     Authorization: `Bearer ${process.env.STRAPI_API_TOKEN}`,
-  //   },
-  // };
-  // try {
-  //   const res = await fetch("http://127.0.0.1:1337/api/categories", options);
-  //   const data = await res.json();
-  //   return data;
-  // } catch (err) {
-  //   console.error(err);
-  // }
+  try {
+    // const categories = await client.fetch<any[]>(`*[_type == "category"]`);
+    // return categories;
+  } catch (err) {
+    console.error(err);
+  }
   return [];
 }
