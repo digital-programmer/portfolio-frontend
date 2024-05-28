@@ -6,19 +6,21 @@ export default function Footer() {
 
   return (
     <div className={"bg-background-100 dark:bg-background-100 border-t border-t-background-200 dark:border-t-background-200 tracking-wide " + dmSans.className}>
-      <div className="flex flex-col md:flex-row md:justify-between lg:max-w-screen-lg lg:mx-auto w-full items-center py-1 md:px-4 px-2 text-text-800 dark:text-text-800 text-[10px] lg:text-[12px] font-light dark:font-thin">
-        <div className="flex gap-1 items-center">
-          Copyright &copy; {year} - Digital Programmer
-        </div>
-        <div className="flex gap-1 items-center">
-          <span>Made with</span> <Heart />
+      <div className="lg:max-w-screen-lg lg:mx-auto w-full">
+        <div className="flex flex-col md:flex-row md:justify-between items-center text-[10px] lg:text-[12px] font-light dark:font-thin text-text-800 dark:text-text-800 py-1 md:px-4 px-2">
+          <div className="flex gap-1 items-center">
+            Copyright &copy; {year} - Digital Programmer
+          </div>
+          <div className="flex gap-1 items-center">
+            <span>Made with</span> <HeartIcon />
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-const Heart = () => {
+const HeartIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
