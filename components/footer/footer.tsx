@@ -1,11 +1,14 @@
+import { DM_Sans } from "next/font/google";
+const dmSans = DM_Sans({ subsets: ["latin"] });
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <div className="bg-background-100 dark:bg-background-100 border-t border-t-background-200 dark:border-t-background-200">
+    <div className={"bg-background-100 dark:bg-background-100 border-t border-t-background-200 dark:border-t-background-200 tracking-wide " + dmSans.className}>
       <div className="flex justify-between lg:max-w-screen-lg lg:mx-auto w-full items-center py-1 md:px-4 px-2 text-text-800 dark:text-text-800 text-[10px] lg:text-[12px] font-light dark:font-thin">
         <div className="flex gap-1 items-center">
-          &copy; Digital Programmer
+          &copy; {year} - Digital Programmer
         </div>
         <div className="flex gap-1 items-center">
           <span>Made with</span> <Heart />
