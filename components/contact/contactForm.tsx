@@ -25,20 +25,20 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-        <div className="dark:bg-background-50 dark:border dark:border-primary-200 shadow-inner rounded-md h-max p-4 md:p-6 bg-white gap-4 flex lg:mt-[36px]">
+        <div className="dark:bg-background-100 dark:border dark:border-primary-200 shadow-inner rounded-md h-max p-4 md:p-6 bg-white gap-4 flex lg:mt-[36px]">
             <div className="text-text-900 dark:text-text-900 flex flex-col gap-4">
                 <div className="text-[12px] md:text-sm text-text-900 dark:text-text-900 font-semibold">
                     Form submitted successfully.<br/>
                     I will reach back to you within 3 days. 
                 </div>
-                <div className="text-[12px] md:text-sm text-text-900 dark:text-text-900">
+                <div className="text-[12px] md:text-sm text-text-900 dark:text-text-900 flex flex-col gap-1">
                     <div className="font-light">Meanwhile, you can check out -</div>
                     <div className="flex gap-4 items-center font-light">
-                        <Link href={"/blog"} className="flex gap-[4px] items-center text-accent-500 dark:text-accent-500 text-underline">
+                        <Link href={"/blog"} className="flex gap-[4px] items-center text-accent-500 dark:text-accent-500 underline underline-offset-2">
                             Blog
                             <FaArrowUpRightFromSquare size={12}/>
                         </Link>
-                        <Link href={"/portfolio"} className="flex gap-[4px] items-center text-accent-500 dark:text-accent-500 text-underline">
+                        <Link href={"/portfolio"} className="flex gap-[4px] items-center text-accent-500 dark:text-accent-500 underline underline-offset-2">
                             Portfolio
                             <FaArrowUpRightFromSquare size={12}/>
                         </Link>
