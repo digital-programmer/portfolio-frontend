@@ -62,7 +62,7 @@ export default function About() {
           <div className="col-span-1 md:col-span-2 flex flex-col gap-8">
             {/* start of contact details */}
             <div className="flex flex-col gap-2 md:gap-3">
-              <div className="text-sm md:text-base text-text-900 dark:text-text-900 font-medium">
+              <div className="text-sm md:text-base text-text-900 dark:text-text-900 font-semibold">
                 My contact details
               </div>
               <div className="text-sm flex flex-col gap-4">
@@ -96,11 +96,11 @@ export default function About() {
             {/* end of contact details */}
 
             {/* start of social profiles */}
-            <div className="flex flex-col gap-2 md:gap-3 v">
-              <div className="text-sm md:text-base text-text-900 dark:text-text-900 font-medium">
+            <div className="flex flex-col gap-2 md:gap-3">
+              <div className="text-sm md:text-base text-text-900 dark:text-text-900 font-semibold">
                 My social profiles
               </div>
-              <div className="w-max flex gap-4 items-center bg-background-100 dark:bg-background-100 p-2 rounded-md">
+              <div className="w-max flex gap-3 md:gap-4 items-center">
                 <Link
                   href={"https://www.linkedin.com/in/dibyamohanacharya/"}
                   target="_blank"
