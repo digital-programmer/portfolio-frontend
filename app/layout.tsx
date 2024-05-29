@@ -29,7 +29,7 @@ export default function RootLayout({
       <body
         className={
           inter.className +
-          " bg-background-100 dark:bg-background-100"
+          " bg-background-50 dark:bg-background-50"
         }
       >
         <Navbar />
