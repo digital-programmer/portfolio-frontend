@@ -56,7 +56,7 @@ export default function About() {
         {/* end of customer pitch */}
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4">
-          <div className="col-span-1 md:col-span-2 flex flex-col gap-8">
+          <div className="col-span-1 md:col-span-2 flex flex-col gap-8 order-2 md:order-1">
             {/* start of contact details */}
             <div className="flex flex-col gap-2 md:gap-3">
               <div className="text-sm md:text-base text-text-900 dark:text-text-900 font-semibold">
@@ -135,68 +135,78 @@ export default function About() {
             {/* end of social profiles */}
           </div>
           {/* start of contact form */}
-          <div className="col-span-1 md:col-span-3">
+          <div className="col-span-1 md:col-span-3 order-1 md:order-2">
             <div className="flex flex-col gap-2 md:gap-3 h-full">
               <div className="text-sm md:text-base text-text-900 dark:text-text-900 font-semibold">
                 Contact form
               </div>
-              <div className="dark:bg-background-50 dark:border dark:border-primary-200 shadow-inner rounded-md h-max p-4 md:p-6 bg-white flex flex-col gap-4">
-                <div className="text-[12px] md:text-sm flex flex-col gap-1">
-                  <label
-                    htmlFor="name"
-                    className="block leading-6 text-text-900 font-normal"
-                  >
-                    Name
-                  </label>
-                  <div>
-                    <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      autoComplete="off"
-                      placeholder="Naruto Uzumaki"
-                      className="block w-full rounded-md border-0 px-3 md:px-3.5 py-2 md:py-2.5 text-text-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-accent-500 sm:text-sm sm:leading-6 dark:bg-background-100 dark:ring-background-200 dark:placeholder:text-primary-300"
-                    />
+              <form>
+                <div className="dark:bg-background-50 dark:border dark:border-primary-200 shadow-inner rounded-md h-max p-4 md:p-6 bg-white flex flex-col gap-4">
+                  <div className="text-[12px] md:text-sm flex flex-col gap-1">
+                    <label
+                      htmlFor="name"
+                      className="block leading-6 text-text-900 font-normal"
+                    >
+                      Name
+                    </label>
+                    <div>
+                      <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        autoComplete="off"
+                        placeholder="Naruto Uzumaki"
+                        className="block w-full rounded-md border-0 px-3 md:px-3.5 py-2 md:py-2.5 text-text-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-accent-300 sm:text-sm sm:leading-6 dark:bg-background-100 dark:ring-background-200 dark:placeholder:text-primary-300 outline-none"
+                      />
+                    </div>
+                  </div>
+                  <div className="text-[12px] md:text-sm flex flex-col gap-1">
+                    <label
+                      htmlFor="email"
+                      className="block leading-6 text-text-900 font-normal"
+                    >
+                      Email
+                    </label>
+                    <div>
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        autoComplete="off"
+                        placeholder="example@hokage.com"
+                        className="block w-full rounded-md border-0 px-3 md:px-3.5 py-2 md:py-2.5 text-text-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-accent-300 sm:text-sm sm:leading-6 dark:bg-background-100 dark:ring-background-200 dark:placeholder:text-primary-300 outline-none"
+                      />
+                    </div>
+                  </div>
+                  <div className="text-[12px] md:text-sm flex flex-col gap-1">
+                    <label
+                      htmlFor="about"
+                      className="block leading-6 text-text-900 font-normal"
+                    >
+                      About
+                    </label>
+                    <div>
+                      <textarea
+                        id="about"
+                        name="about"
+                        rows={4}
+                        placeholder="What are you looking for?"
+                        className="block w-full rounded-md border-0 px-3 md:px-3.5 py-2 md:py-2.5 text-text-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-accent-300 sm:text-sm sm:leading-6 dark:bg-background-100 dark:ring-background-200 dark:placeholder:text-primary-300 outline-none"
+                        defaultValue={""}
+                        maxLength={500}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex justify-end md:justify-start">
+                    <button
+                      type="button"
+                      className="text-text-100 dark:text-text-900 bg-gradient-to-br from-accent-400 to-accent-500 hover:bg-gradient-to-bl focus:outline-none font-medium rounded-md text-[12px] md:text-sm px-6 py-2 md:px-5 md:py-2.5 text-center dark:from-accent-500 dark:to-accent-600"
+                    >
+                      Submit
+                    </button>
                   </div>
                 </div>
-                <div className="text-[12px] md:text-sm flex flex-col gap-1">
-                  <label
-                    htmlFor="email"
-                    className="block leading-6 text-text-900 font-normal"
-                  >
-                    Email
-                  </label>
-                  <div>
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      autoComplete="off"
-                      placeholder="example@hokage.com"
-                      className="block w-full rounded-md border-0 px-3 md:px-3.5 py-2 md:py-2.5 text-text-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-accent-500 sm:text-sm sm:leading-6 dark:bg-background-100 dark:ring-background-200 dark:placeholder:text-primary-300"
-                    />
-                  </div>
-                </div>
-                <div className="text-[12px] md:text-sm flex flex-col gap-1">
-                  <label
-                    htmlFor="about"
-                    className="block leading-6 text-text-900 font-normal"
-                  >
-                    About
-                  </label>
-                  <div>
-                    <textarea
-                      id="about"
-                      name="about"
-                      rows={4}
-                      placeholder="What are you looking for?"
-                      className="block w-full rounded-md border-0 px-3 md:px-3.5 py-2 md:py-2.5 text-text-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-accent-500 sm:text-sm sm:leading-6 dark:bg-background-100 dark:ring-background-200 dark:placeholder:text-primary-300"
-                      defaultValue={""}
-                      maxLength={500}
-                    />
-                  </div>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
           {/* end of contact form */}
