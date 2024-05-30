@@ -77,7 +77,7 @@ const config: Config = {
       },
       animation: {
         wiggle: "wiggle 3s ease-in-out infinite",
-        apppearFromRight: "apppearFromRight 0.2s ease-in",
+        apppearFromRight: "apppearFromRight 0.1s ease-in",
       },
       keyframes: {
         wiggle: {
