@@ -28,7 +28,7 @@ export default function ContactForm() {
         <div className="dark:bg-background-100 dark:border dark:border-primary-200 shadow-inner rounded-md h-max p-4 md:p-6 bg-white gap-4 flex lg:mt-[36px]">
             <div className="text-text-900 dark:text-text-900 flex flex-col gap-4">
                 <div className="text-[12px] md:text-sm text-text-900 dark:text-text-900 font-semibold">
-                    Form submitted successfully.<br/>
+                    Thanks for contacting me.<br/>
                     I will reach back to you within 3 days. 
                 </div>
                 <div className="text-[12px] md:text-sm text-text-900 dark:text-text-900 flex flex-col gap-1">

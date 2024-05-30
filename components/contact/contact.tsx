@@ -2,10 +2,10 @@ import { DM_Sans } from "next/font/google";
 import Link from "next/link";
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { FaClock, FaBolt, FaHandSparkles } from "react-icons/fa";
-import ContactForm from "../contact/contactForm";
+import ContactForm from "./contactForm";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
-export default function About() {
+export default function Contact() {
 
   return (
     <div>

@@ -7,6 +7,8 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "../../public/logo.png";
 import { DM_Sans } from "next/font/google";
+import { useState } from "react";
+import SideMenuBar from "./sideMenuBar";
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 const logoClass =
@@ -22,6 +24,7 @@ const toggleDarkModeBtnClass = dmSans.className +
 
 export default function Navbar() {
     const [theme, setTheme] = useDarkMode();
+    const [isNavOpen, setIsNavOpen] = useState(false);
     const scrollDirection = useScrollDirection();
     const isMobile = useWindowResize();
 
@@ -31,6 +34,10 @@ export default function Navbar() {
         } else {
             setTheme("dark");
         }
+    }
+
+    function handleSideMenuBackdropClick() {
+        setIsNavOpen(false);
     }
 
     const themeIcon =
@@ -68,43 +75,57 @@ export default function Navbar() {
     }
 
     return (
-        <nav
-            className={`flex md:justify-between lg:max-w-screen-lg lg:mx-auto w-full items-center py-4 md:py-6 md:px-4 px-2 bg-background-50 dark:bg-background-50 transition-[top] duration-300 sticky ${finalPositionClass}`}
-        >
-            <Link href="/" scroll={false}>
-                <div className="flex items-center gap-2">
-                    <Image
-                        className="animate-wiggle"
-                        src={logo}
-                        alt="Logo of digital programmer website"
-                        width={36}
-                        height={36}
-                        priority
-                    />
-                    <div className={logoClass}>Digital Programmer</div>
-                </div>
-            </Link>
+        <>
+            <nav
+                className={`flex justify-between lg:max-w-screen-lg lg:mx-auto w-full items-center py-4 md:py-6 md:px-4 px-2 bg-background-50 dark:bg-background-50 transition-[top] duration-300 sticky gap-4 md:gap-6 ${finalPositionClass}`}
+            >
+                <Link href="/" scroll={false}>
+                    <div className="flex items-center gap-2">
+                        <Image
+                            className="animate-wiggle"
+                            src={logo}
+                            alt="Logo of digital programmer website"
+                            width={36}
+                            height={36}
+                            priority
+                        />
+                        <div className={logoClass}>Digital Programmer</div>
+                    </div>
+                </Link>
 
-            <div className="flex gap-4 md:gap-6 flex-1 justify-end items-center">
-                <ul className="flex items-center gap-4 md:gap-6 md:text-base text-sm">
-                    <li>
-                        <Link href="/blog" className={fontClass} scroll={false}>
-                            Blog
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="/about" className={fontClass} scroll={false}>
-                            About
-                        </Link>
-                    </li>
-                </ul>
-                <button
-                    onClick={handleBtnClick}
-                    className={toggleDarkModeBtnClass}
-                >
-                    {themeIcon}
-                </button>
-            </div>
-        </nav>
+                <div className="flex gap-2 items-center justify-end">
+                    <div className="flex gap-4 md:gap-6 flex-1 justify-end items-center order-2 md:order-1">
+                        <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-8 h-8 text-sm text-accent-500 rounded-md md:hidden bg-accent-100 focus:outline-none dark:text-accent-500 dark:bg-accent-100" aria-controls="navbar-default" aria-expanded="false" onClick={() => setIsNavOpen((prev) => !prev)}>
+                            <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
+                            </svg>
+                        </button>
+                        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+                            <ul className="flex items-center gap-4 md:gap-6 md:text-base text-sm">
+                                <li>
+                                    <Link href="/blog" className={fontClass} scroll={false}>
+                                        Blog
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/contact" className={fontClass} scroll={false}>
+                                        Contact
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <button
+                        onClick={handleBtnClick}
+                        className={toggleDarkModeBtnClass + ' md:ml-3 order-1 md:order-2'}
+                    >
+                        {themeIcon}
+                    </button>
+                </div>
+            </nav>
+            {isNavOpen ? <SideMenuBar onBackdropClick={handleSideMenuBackdropClick} /> : ''}
+        </>
+
     );
 }

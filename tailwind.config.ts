@@ -77,11 +77,16 @@ const config: Config = {
       },
       animation: {
         wiggle: "wiggle 3s ease-in-out infinite",
+        apppearFromRight: "apppearFromRight 0.2s ease-in",
       },
       keyframes: {
         wiggle: {
           "0%, 100%": { transform: "rotate(-90deg)" },
           "50%": { transform: "rotate(90deg)" },
+        },
+        apppearFromRight: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0)" },
         },
       },
     },
