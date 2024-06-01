@@ -108,6 +108,11 @@ export default function Navbar() {
                                     </Link>
                                 </li>
                                 <li>
+                                    <Link href="/portfolio" className={fontClass} scroll={false}>
+                                        Portfolio
+                                    </Link>
+                                </li>
+                                <li>
                                     <Link href="/contact" className={fontClass} scroll={false}>
                                         Contact
                                     </Link>

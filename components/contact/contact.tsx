@@ -11,7 +11,7 @@ export default function Contact() {
     <div>
       <div className="mb-2">
         {/* start of customer pitch */}
-        <div className="flex flex-col md:items-center md:justify-center mb-8 md:mb-12 bg-white py-4 md:py-12 px-3 rounded-md dark:bg-background-50 dark:border dark:border-primary-200 shdaow-inner">
+        <div className="flex flex-col md:items-center md:justify-center mb-8 md:mb-12 bg-white py-4 md:py-12 px-3 rounded-md dark:bg-background-50 dark:border dark:border-primary-200 shadow-inner">
           <div
             className={
               "text-xl md:text-3xl font-semibold text-text-950 dark:text-text-950 " +
