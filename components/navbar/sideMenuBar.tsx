@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "../../public/logo.png";
 import { usePathname } from "next/navigation";
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
@@ -33,15 +34,15 @@ export default function SideMenuBar({
   return (
     <>
       <div
-        className="fixed right-0 top-0 bottom-0 h-dvh backdrop-blur-md w-full"
+        className="fixed right-0 top-0 bottom-0 h-dvh backdrop-blur-md w-full z-40"
         onClick={() => onBackdropClick()}
       >
         <div
-          className="w-[60dvw] bg-white dark:bg-background-100 absolute right-0 top-0 bottom-0 h-dvh z-40 animate-apppearFromRight"
+          className="w-[60dvw] bg-white dark:bg-background-100 absolute right-0 top-0 bottom-0 h-dvh animate-apppearFromRight z-50"
           onClick={handleNonBackdropClick}
         >
-          <div className="px-4 py-8">
-            <div className="flex flex-col gap-8">
+          <div className="px-4 pt-8 pb-4 h-full">
+            <div className="flex flex-col gap-8 h-full">
               <div>
                 <Link href="/" scroll={false}>
                   <div className="flex items-center gap-2">
@@ -154,6 +155,46 @@ export default function SideMenuBar({
                   </Link>
                 </li>
               </ul>
+              <div className="flex flex-col gap-1 mt-auto">
+                <div className="text-text-800 dark:text-text-800 text-[12px] font-normal">
+                  Follow me on -
+                </div>
+                <div className="w-max flex gap-3 items-center">
+                  <Link
+                    href={"https://www.linkedin.com/in/dibyamohanacharya/"}
+                    target="_blank"
+                  >
+                    <FaLinkedin
+                      className="text-accent-500 dark:text-accent-500 rounded-lg"
+                      size={24}
+                    />
+                  </Link>
+                  <Link
+                    href={"https://www.instagram.com/dibyamohan_"}
+                    target="_blank"
+                  >
+                    <FaInstagram
+                      className="text-accent-500 dark:text-accent-500 rounded-lg"
+                      size={24}
+                    />
+                  </Link>
+                  <Link href={"https://twitter.com/dibya_mohan_"} target="_blank">
+                    <FaTwitter
+                      className="text-accent-500 dark:text-accent-500 rounded-lg"
+                      size={24}
+                    />
+                  </Link>
+                  <Link
+                    href={"https://github.com/digital-programmer"}
+                    target="_blank"
+                  >
+                    <FaGithub
+                      className="text-accent-500 dark:text-accent-500 rounded-lg"
+                      size={24}
+                    />
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>

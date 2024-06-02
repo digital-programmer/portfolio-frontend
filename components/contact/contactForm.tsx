@@ -29,7 +29,7 @@ export default function ContactForm() {
             <div className="text-text-900 dark:text-text-900 flex flex-col gap-4">
                 <div className="text-[12px] md:text-sm text-text-900 dark:text-text-900 font-semibold">
                     Thanks for contacting me.<br/>
-                    I will reach back to you within 3 days. 
+                    I will reach back to you shortly. 
                 </div>
                 <div className="text-[12px] md:text-sm text-text-900 dark:text-text-900 flex flex-col gap-1">
                     <div className="font-light">Meanwhile, you can check out -</div>
@@ -52,7 +52,7 @@ export default function ContactForm() {
   return (
     <>
       <div className="text-sm md:text-base text-text-900 dark:text-text-900 font-semibold">
-        Contact form
+        Let&apos;s connect
       </div>
       <form onSubmit={handleFormSubmit}>
         <div className="dark:bg-background-50 dark:border dark:border-primary-200 shadow-inner rounded-md h-max p-4 md:p-6 bg-white flex flex-col gap-4">
