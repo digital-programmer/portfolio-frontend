@@ -29,7 +29,7 @@ export default function Home() {
           }
         >
           I&apos;m Dibya Mohan Acharya, software engineer. I help teams build
-          and launch scalable digital products. Want to hire me?.
+          and launch amazing digital products. Want to hire me?.
         </div>
 
         <div className="flex items-center gap-4 flex-wrap">
