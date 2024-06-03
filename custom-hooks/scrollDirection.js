@@ -9,7 +9,7 @@ export default function useScrollDirection() {
         const updateScrollDirection = () => {
             const scrollY = window.scrollY;
             const direction = scrollY > lastScrollY ? "down" : "up";
-            if (direction !== scrollDirection && Math.abs(scrollY - lastScrollY) > 10) {
+            if (direction !== scrollDirection && Math.abs(scrollY - lastScrollY) > 36) {
                 setScrollDirection(direction);
             }
             lastScrollY = scrollY > 0 ? scrollY : 0;
@@ -20,6 +20,7 @@ export default function useScrollDirection() {
             window.removeEventListener("scroll", updateScrollDirection);
         }
     }, [scrollDirection]);
+
 
     return scrollDirection;
 }

@@ -17,7 +17,7 @@ export const ThemeContext = createContext<ThemeContextType>({
 
 const ThemeProvider : FC<{children: ReactNode}> = ({children}) => {
     const [theme, setTheme] = useDarkMode();
-    return <ThemeContext.Provider value={{theme, setTheme} as ThemeContextType}>
+    return <ThemeContext.Provider value={{theme, setTheme} as unknown as ThemeContextType}>
         {children}
     </ThemeContext.Provider>
 }

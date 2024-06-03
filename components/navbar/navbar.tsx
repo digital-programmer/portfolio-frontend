@@ -73,7 +73,7 @@ export default function Navbar() {
       </span>
     );
 
-  let finalPositionClass = scrollDirection === "down" ? "-top-96" : "top-0";
+  let finalPositionClass = scrollDirection === "down" ? "-top-24" : "top-0";
   if (!isMobile) {
     finalPositionClass = "top-0";
   }
