@@ -175,8 +175,8 @@ export default function Footer() {
             </div>
           </div>
           {/* end of footer main content */}
-          <div className="w-full h-[18px] md:h-[24px] overflow-hidden">          
-            <div className="bottom-[-36px] font-bold text-primary-100 dark:text-primary-100 md:text-4xl text-xl uppercase text-center w-full">
+          <div className="w-full h-[20px] md:h-[26px] overflow-hidden">          
+            <div className="font-bold text-primary-100 dark:text-primary-100 md:text-4xl text-2xl uppercase text-center w-full">
               Digital Programmer
             </div>
           </div>
