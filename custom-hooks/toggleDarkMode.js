@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 export default function useDarkMode() {
-    const [theme, setTheme] = useState();
+    const [theme, setTheme] = useState(null);
 
     useEffect(() => {
         const currentTheme = localStorage.getItem("dibyamohan_portfolio_theme");
