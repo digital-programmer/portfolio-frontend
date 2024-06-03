@@ -3,7 +3,11 @@ import { useState, useEffect } from 'react';
 
 
 export default function useWindowResize() {
-    const [width, setWidth] = useState(window?.innerWidth);
+    const [width, setWidth] = useState(null);
+
+    useEffect(() => {
+        setWidth(window.innerWidth)
+    }, [])
 
     useEffect(() => {
         function handleWindowSizeChange() {
@@ -14,7 +18,7 @@ export default function useWindowResize() {
         return () => {
             window.removeEventListener('resize', handleWindowSizeChange);
         }
-    }, [setWidth, width]);
+    }, [width]);
 
     return width <= 768;
 }

@@ -1,15 +1,15 @@
 "use client";
 
-import useDarkMode from "../../custom-hooks/toggleDarkMode";
 import useScrollDirection from "../../custom-hooks/scrollDirection";
 import useWindowResize from "../../custom-hooks/resizeWindow";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../../public/logo.png";
 import { DM_Sans } from "next/font/google";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import SideMenuBar from "./sideMenuBar";
 import { usePathname } from "next/navigation";
+import { ThemeContext } from "@/utils/themeContext";
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 const logoClass =
@@ -26,8 +26,8 @@ const toggleDarkModeBtnClass =
 const activeclassName = ` text-accent-500 dark:text-accent-500`;
 
 export default function Navbar() {
+  const {theme, setTheme} = useContext(ThemeContext);
   const pathname = usePathname();
-  const [theme, setTheme] = useDarkMode();
   const [isNavOpen, setIsNavOpen] = useState(false);
   const scrollDirection = useScrollDirection();
   const isMobile = useWindowResize();

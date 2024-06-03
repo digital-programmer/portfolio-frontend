@@ -1,18 +1,13 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import "./global_icons.css";
-import dynamic from "next/dynamic";
 import Footer from "@/components/footer/footer"
+import Navbar from "@/components/navbar/navbar";
+import ThemeProvider from "@/utils/themeContext";
+import type { Metadata } from "next";
+
 
 const inter = Inter({ subsets: ["latin"] });
-
-const Navbar = dynamic(() => import("../components/navbar/navbar"), {
-  ssr: false,
-  loading: () => <>
-    <div className="h-[68px] md:h-[84px]"></div>
-  </>,
-});
 
 export const metadata: Metadata = {
   title: "Digital Programmer",
@@ -24,6 +19,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body
@@ -32,11 +28,13 @@ export default function RootLayout({
           " bg-background-50 dark:bg-background-50"
         }
       >
-        <Navbar />
-        <main className="lg:max-w-screen-md lg:mx-auto w-full text-text-900 dark:text-text-900 text-sm md:text-base">
-          <div className="min-h-screen flex flex-col p-4 md:p-8">{children}</div>
-        </main>
-        <Footer/>
+        <ThemeProvider>
+          <Navbar />
+          <main className="lg:max-w-screen-md lg:mx-auto w-full text-text-900 dark:text-text-900 text-sm md:text-base">
+            <div className="min-h-screen flex flex-col p-4 md:p-8">{children}</div>
+          </main>
+          <Footer/>
+        </ThemeProvider>
       </body>
     </html>
   );
