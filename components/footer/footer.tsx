@@ -2,6 +2,7 @@ import { DM_Sans } from "next/font/google";
 import Link from "next/link";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 const dmSans = DM_Sans({ subsets: ["latin"] });
+import "./footer.css";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -14,165 +15,172 @@ export default function Footer() {
       }
     >
       <div className="lg:max-w-screen-lg lg:mx-auto w-full">
-        {/* start of footer main content */}
-        <div className="px-4 py-8 md:p-8 flex flex-col gap-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 text-text-800 dark:text-text-800 font-light text-sm gap-2 md:gap-4">
-            <div className="flex flex-col md:items-center">
-              <div className="text-text-900 dark:text-text-900 font-semibold mb-1">
-                You can mail me at
+        <div>
+          {/* start of footer main content */}
+          <div className="px-4 py-8 md:p-8 flex flex-col gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 text-text-800 dark:text-text-800 font-light text-sm gap-2 md:gap-4">
+              <div className="flex flex-col md:items-center">
+                <div className="text-text-900 dark:text-text-900 font-semibold mb-1">
+                  You can mail me at
+                </div>
+                <div>mohandibya.acharya@gmail.com</div>
               </div>
-              <div>mohandibya.acharya@gmail.com</div>
+              <div className="flex flex-col md:items-center">
+                <div className="text-text-900 dark:text-text-900 font-semibold mb-1">
+                  Call me
+                </div>
+                <div>+91 8328935275</div>
+              </div>
+              <div className="flex flex-col md:items-center">
+                <div className="text-text-900 dark:text-text-900 font-semibold mb-1">
+                  Location
+                </div>
+                <div>Somewhere in India</div>
+              </div>
             </div>
-            <div className="flex flex-col md:items-center">
-              <div className="text-text-900 dark:text-text-900 font-semibold mb-1">
-                Call me
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Start of footer pitch */}
+              <div className="col-span-1 text-text-800 dark:text-text-800 flex text-sm md:justify-center">
+                <div className="flex flex-col gap-2 w-[240px]">
+                  <div className="font-semibold text-text-900 dark:text-text-900">
+                    Dedicated to work with passion
+                  </div>
+                  <div className="font-light">
+                    Radiating creativity. I am software engineer driven by
+                    pasion and innovation.
+                  </div>
+                </div>
               </div>
-              <div>+91 8328935275</div>
-            </div>
-            <div className="flex flex-col md:items-center">
-              <div className="text-text-900 dark:text-text-900 font-semibold mb-1">
-                Location
+              {/* End of footer pitch */}
+              {/* Start of Portfolio Links and Social Media Links */}
+              <div className="col-span-1 text-text-800 dark:text-text-800 flex gap-12 text-sm md:justify-center">
+                <div className="flex flex-col gap-2">
+                  <div className="font-semibold text-text-900 dark:text-text-900">
+                    Explore
+                  </div>
+                  <ul className="font-light flex flex-col gap-1">
+                    <Link
+                      href={"/"}
+                      className="hover:text-accent-500 hover:underline flex items-center gap-1"
+                    >
+                      <li>Home</li>
+                      <FaArrowUpRightFromSquare
+                        size={10}
+                        className="text-accent-500 dark:text-accent-500"
+                      />
+                    </Link>
+                    <Link
+                      href={"/blog"}
+                      className="hover:text-accent-500 hover:underline flex items-center gap-1"
+                    >
+                      <li>Blog</li>
+                      <FaArrowUpRightFromSquare
+                        size={10}
+                        className="text-accent-500 dark:text-accent-500"
+                      />
+                    </Link>
+                    <Link
+                      href={"/portfolio"}
+                      className="hover:text-accent-500 hover:underline flex items-center gap-1"
+                    >
+                      <li>Portfolio</li>
+                      <FaArrowUpRightFromSquare
+                        size={10}
+                        className="text-accent-500 dark:text-accent-500"
+                      />
+                    </Link>
+                    <Link
+                      href={"/contact"}
+                      className="hover:text-accent-500 hover:underline flex items-center gap-1"
+                    >
+                      <li>Contact</li>
+                      <FaArrowUpRightFromSquare
+                        size={10}
+                        className="text-accent-500 dark:text-accent-500"
+                      />
+                    </Link>
+                  </ul>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <div className="font-semibold text-text-900 dark:text-text-900">
+                    Say Hello!
+                  </div>
+                  <ul className="font-light flex flex-col gap-1">
+                    <Link
+                      className="hover:text-accent-500 hover:underline flex items-center gap-1"
+                      href={"https://www.linkedin.com/in/dibyamohanacharya/"}
+                      target="_blank"
+                    >
+                      <li>LinkedIn</li>
+                      <FaArrowUpRightFromSquare
+                        size={10}
+                        className="text-accent-500 dark:text-accent-500"
+                      />
+                    </Link>
+                    <Link
+                      className="hover:text-accent-500 hover:underline flex items-center gap-1"
+                      href={"https://www.instagram.com/dibyamohan_"}
+                      target="_blank"
+                    >
+                      <li>Instagram</li>
+                      <FaArrowUpRightFromSquare
+                        size={10}
+                        className="text-accent-500 dark:text-accent-500"
+                      />
+                    </Link>
+                    <Link
+                      className="hover:text-accent-500 hover:underline flex items-center gap-1"
+                      href={"https://twitter.com/dibya_mohan_"}
+                      target="_blank"
+                    >
+                      <li>Twitter</li>
+                      <FaArrowUpRightFromSquare
+                        size={10}
+                        className="text-accent-500 dark:text-accent-500"
+                      />
+                    </Link>
+                    <Link
+                      className="hover:text-accent-500 hover:underline flex items-center gap-1"
+                      href={"https://github.com/digital-programmer"}
+                      target="_blank"
+                    >
+                      <li>Github</li>
+                      <FaArrowUpRightFromSquare
+                        size={10}
+                        className="text-accent-500 dark:text-accent-500"
+                      />
+                    </Link>
+                  </ul>
+                </div>
               </div>
-              <div>Somewhere in India</div>
+              {/* End of Portfolio Links and Social Media Links */}
+              {/* Start of contact options */}
+              <div className="col-span-1 text-text-800 dark:text-text-800 text-sm flex flex-col md:items-center">
+                <div>
+                  <div className="font-semibold text-text-900 dark:text-text-900">
+                    Let&apos;s work together
+                  </div>
+                  <Link href={"/contact"}>
+                    <div className="font-light mt-1.5 flex items-center gap-2 w-max hover:text-accent-500 hover:underline">
+                      Have an Idea?
+                      <FaArrowUpRightFromSquare
+                        size={14}
+                        className="text-accent-500 dark:text-accent-500"
+                      />
+                    </div>
+                  </Link>
+                </div>
+              </div>
+              {/* End of contact options */}
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Start of footer pitch */}
-            <div className="col-span-1 text-text-800 dark:text-text-800 flex text-sm md:justify-center">
-              <div className="flex flex-col gap-2 w-[240px]">
-                <div className="font-semibold text-text-900 dark:text-text-900">
-                  Dedicated to work with passion
-                </div>
-                <div className="font-light">
-                  Radiating creativity. I am software engineer driven by pasion
-                  and innovation.
-                </div>
-              </div>
+          {/* end of footer main content */}
+          <div className="w-full h-[18px] md:h-[24px] overflow-hidden">          
+            <div className="bottom-[-36px] font-bold text-primary-100 dark:text-primary-100 md:text-4xl text-xl uppercase text-center w-full">
+              Digital Programmer
             </div>
-            {/* End of footer pitch */}
-            {/* Start of Portfolio Links and Social Media Links */}
-            <div className="col-span-1 text-text-800 dark:text-text-800 flex gap-12 text-sm md:justify-center">
-              <div className="flex flex-col gap-2">
-                <div className="font-semibold text-text-900 dark:text-text-900">
-                  Explore
-                </div>
-                <ul className="font-light flex flex-col gap-1">
-                  <Link
-                    href={"/"}
-                    className="hover:text-accent-500 hover:underline flex items-center gap-1"
-                  >
-                    <li>Home</li>
-                    <FaArrowUpRightFromSquare
-                      size={10}
-                      className="text-accent-500 dark:text-accent-500"
-                    />
-                  </Link>
-                  <Link
-                    href={"/blog"}
-                    className="hover:text-accent-500 hover:underline flex items-center gap-1"
-                  >
-                    <li>Blog</li>
-                    <FaArrowUpRightFromSquare
-                      size={10}
-                      className="text-accent-500 dark:text-accent-500"
-                    />
-                  </Link>
-                  <Link
-                    href={"/portfolio"}
-                    className="hover:text-accent-500 hover:underline flex items-center gap-1"
-                  >
-                    <li>Portfolio</li>
-                    <FaArrowUpRightFromSquare
-                      size={10}
-                      className="text-accent-500 dark:text-accent-500"
-                    />
-                  </Link>
-                  <Link
-                    href={"/contact"}
-                    className="hover:text-accent-500 hover:underline flex items-center gap-1"
-                  >
-                    <li>Contact</li>
-                    <FaArrowUpRightFromSquare
-                      size={10}
-                      className="text-accent-500 dark:text-accent-500"
-                    />
-                  </Link>
-                </ul>
-              </div>
-              <div className="flex flex-col gap-2">
-                <div className="font-semibold text-text-900 dark:text-text-900">
-                  Say Hello!
-                </div>
-                <ul className="font-light flex flex-col gap-1">
-                  <Link
-                    className="hover:text-accent-500 hover:underline flex items-center gap-1"
-                    href={"https://www.linkedin.com/in/dibyamohanacharya/"}
-                    target="_blank"
-                  >
-                    <li>LinkedIn</li>
-                    <FaArrowUpRightFromSquare
-                      size={10}
-                      className="text-accent-500 dark:text-accent-500"
-                    />
-                  </Link>
-                  <Link
-                    className="hover:text-accent-500 hover:underline flex items-center gap-1"
-                    href={"https://www.instagram.com/dibyamohan_"}
-                    target="_blank"
-                  >
-                    <li>Instagram</li>
-                    <FaArrowUpRightFromSquare
-                      size={10}
-                      className="text-accent-500 dark:text-accent-500"
-                    />
-                  </Link>
-                  <Link
-                    className="hover:text-accent-500 hover:underline flex items-center gap-1"
-                    href={"https://twitter.com/dibya_mohan_"}
-                    target="_blank"
-                  >
-                    <li>Twitter</li>
-                    <FaArrowUpRightFromSquare
-                      size={10}
-                      className="text-accent-500 dark:text-accent-500"
-                    />
-                  </Link>
-                  <Link
-                    className="hover:text-accent-500 hover:underline flex items-center gap-1"
-                    href={"https://github.com/digital-programmer"}
-                    target="_blank"
-                  >
-                    <li>Github</li>
-                    <FaArrowUpRightFromSquare
-                      size={10}
-                      className="text-accent-500 dark:text-accent-500"
-                    />
-                  </Link>
-                </ul>
-              </div>
-            </div>
-            {/* End of Portfolio Links and Social Media Links */}
-            {/* Start of contact options */}
-            <div className="col-span-1 text-text-800 dark:text-text-800 text-sm flex flex-col md:items-center">
-              <div>
-                <div className="font-semibold text-text-900 dark:text-text-900">
-                  Let&apos;s work together
-                </div>
-                <Link href={"/contact"}>
-                  <div className="font-light mt-1.5 flex items-center gap-2 w-max hover:text-accent-500 hover:underline">
-                    Have an Idea?
-                    <FaArrowUpRightFromSquare
-                      size={14}
-                      className="text-accent-500 dark:text-accent-500"
-                    />
-                  </div>
-                </Link>
-              </div>
-            </div>
-            {/* End of contact options */}
           </div>
         </div>
-        {/* end of footer main content */}
 
         {/* start of copyright content */}
         <div className="flex flex-col items-center text-[10px] lg:text-[12px] font-light dark:font-thin text-text-800 dark:text-text-800 py-1 md:px-4 px-2">
