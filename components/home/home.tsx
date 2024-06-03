@@ -1,16 +1,19 @@
 import Link from "next/link";
-import AlternatingText from "./homeComponents/alternatingText";
-import ProfilePic from "./homeComponents/profilePic";
+import AlternatingText from "./heroComponents/alternatingText";
+import ProfilePic from "./heroComponents/profilePic";
 
 import { DM_Sans } from "next/font/google";
+import BlogSlider from "./slider/blogSlider";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import SkillSlider from "./slider/skillSlider";
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="text-text-900 dark:text-text-900 md:pt-4">
+    <div className="text-text-900 dark:text-text-900 md:pt-4 flex flex-col gap-24 md:gap-32">
       <div className="flex flex-col gap-[32px] justify-center">
         <div>
-          <ProfilePic />
+            <ProfilePic />
         </div>
 
         <div
@@ -29,7 +32,7 @@ export default function Home() {
           }
         >
           I&apos;m Dibya Mohan Acharya, software engineer. I help teams build
-          and launch amazing digital products. Want to hire me?.
+          and launch amazing digital products. Want to hire me?
         </div>
 
         <div className="flex items-center gap-4 flex-wrap">
@@ -50,6 +53,59 @@ export default function Home() {
               </span>
             </button>
           </Link>
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-8">
+        <div className="flex justify-between items-center">
+          <div className="text-text-900 dark:text-text-900 text-xl md:text-2xl font-semibold">
+            {"Why you should hire me?"}
+          </div>
+        </div>
+        <div>
+          <SkillSlider/>
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-8">
+        <div className="flex justify-between items-center">
+          <div className="text-text-900 dark:text-text-900 text-xl md:text-2xl font-semibold">
+            {"Recent Posts"}
+          </div>
+          <Link
+            href={"/blog"}
+            className="text-accent-500 dark:text-accent-500 font-medium hover:underline flex items-center gap-1.5 text-sm md:text-base"
+          >
+            View all
+            <FaArrowUpRightFromSquare
+              size={13}
+              className="text-accent-500 dark:text-accent-500"
+            />
+          </Link>
+        </div>
+        <div>
+          <BlogSlider />
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-8">
+        <div className="flex justify-between items-center">
+          <div className="text-text-900 dark:text-text-900 text-xl md:text-2xl font-semibold">
+            {"Recent Projects"}
+          </div>
+          <Link
+            href={"/blog"}
+            className="text-accent-500 dark:text-accent-500 font-medium hover:underline flex items-center gap-1.5 text-sm md:text-base"
+          >
+            View all
+            <FaArrowUpRightFromSquare
+              size={13}
+              className="text-accent-500 dark:text-accent-500"
+            />
+          </Link>
+        </div>
+        <div>
+          <BlogSlider />
         </div>
       </div>
     </div>

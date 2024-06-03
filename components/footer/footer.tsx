@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <div
       className={
-        "bg-background-50 dark:bg-background-50 border-t border-t-background-200 dark:border-t-background-200 tracking-wide " +
+        "bg-background-50 dark:bg-background-50 border-t border-t-background-200 dark:border-t-background-200 tracking-wide mt-12 " +
         dmSans.className
       }
     >
@@ -24,12 +24,14 @@ export default function Footer() {
                 </div>
                 <div>mohandibya.acharya@gmail.com</div>
               </div>
+
               <div className="flex flex-col md:items-center">
                 <div className="text-text-900 dark:text-text-900 font-semibold mb-1">
                   Call me
                 </div>
                 <div>+91 8328935275</div>
               </div>
+
               <div className="flex flex-col md:items-center">
                 <div className="text-text-900 dark:text-text-900 font-semibold mb-1">
                   Location
@@ -40,7 +42,7 @@ export default function Footer() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Start of footer pitch */}
               <div className="col-span-1 text-text-800 dark:text-text-800 flex text-sm md:justify-center">
-                <div className="flex flex-col gap-2 w-[240px]">
+                <div className="flex flex-col gap-2 w-[240px] lg:w-[200px]">
                   <div className="font-semibold text-text-900 dark:text-text-900">
                     Dedicated to work with passion
                   </div>
@@ -174,8 +176,8 @@ export default function Footer() {
             </div>
           </div>
           {/* end of footer main content */}
-          <div className="w-full h-[20px] md:h-[26px] overflow-hidden">          
-            <div className="font-bold text-primary-100 dark:text-primary-100 md:text-4xl text-2xl uppercase text-center w-full">
+          <div className="w-full h-[20px] md:h-[26px] overflow-hidden">
+            <div className="font-bold text-primary-100 dark:text-primary-100 md:text-4xl text-2xl uppercase text-center w-full md:tracking-widest">
               Digital Programmer
             </div>
           </div>
