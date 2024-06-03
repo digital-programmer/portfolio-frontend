@@ -2,7 +2,6 @@ import { DM_Sans } from "next/font/google";
 import Link from "next/link";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 const dmSans = DM_Sans({ subsets: ["latin"] });
-import "./footer.css";
 
 export default function Footer() {
   const year = new Date().getFullYear();
