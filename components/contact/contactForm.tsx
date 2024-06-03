@@ -36,7 +36,7 @@ export default function ContactForm() {
                     <div className="flex gap-4 items-center font-light">
                         <Link href={"/blog"} className="flex gap-[4px] items-center text-accent-500 dark:text-accent-500 underline underline-offset-2">
                             Blog
-                            <FaArrowUpRightFromSquare size={12}/>
+                            
                         </Link>
                         <Link href={"/portfolio"} className="flex gap-[4px] items-center text-accent-500 dark:text-accent-500 underline underline-offset-2">
                             Portfolio
@@ -125,7 +125,7 @@ export default function ContactForm() {
           <div className="flex justify-end md:justify-start">
             <button
               type="submit"
-              className="text-text-100 dark:text-text-900 bg-gradient-to-br from-accent-400 to-accent-500 hover:bg-gradient-to-bl focus:outline-none font-medium rounded-md text-[12px] md:text-sm px-4 py-2 md:px-5 md:py-2.5 text-center dark:from-accent-500 dark:to-accent-600 flex items-center"
+              className="text-text-100 dark:text-text-900 bg-gradient-to-br from-accent-400 to-accent-500 hover:bg-gradient-to-bl focus:outline-none font-medium rounded-2xl text-[12px] md:text-sm px-4 py-2 md:px-5 md:py-2.5 text-center dark:from-accent-500 dark:to-accent-600 flex items-center"
               disabled={loading}
             >
               {loading ? <ButtonLoader /> : ""}

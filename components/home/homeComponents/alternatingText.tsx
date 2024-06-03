@@ -14,8 +14,8 @@ export default function TypewriterEffect() {
   return (
     <ReactTyped
       strings={texts}
-      typeSpeed={30}
-      backSpeed={20}
+      typeSpeed={40}
+      backSpeed={30}
       backDelay={1000}
       loop
       className='text-primary-500 dark:text-primary-500'

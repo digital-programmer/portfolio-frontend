@@ -81,7 +81,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`flex justify-between lg:max-w-screen-lg lg:mx-auto w-full items-center py-4 md:py-6 md:px-4 px-2 bg-background-50 dark:bg-background-50 transition-[top] duration-300 sticky gap-4 md:gap-6 ${finalPositionClass}`}
+        className={`flex justify-between lg:max-w-screen-lg lg:mx-auto w-full items-center py-4 md:py-6 md:px-4 px-2 bg-background-50 dark:bg-background-50 transition-[top] duration-300 sticky gap-4 md:gap-6 z-30 ${finalPositionClass}`}
       >
         <Link href="/" scroll={false}>
           <div className="flex items-center gap-2">

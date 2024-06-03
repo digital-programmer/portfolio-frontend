@@ -15,7 +15,7 @@ export default function Home() {
 
         <div
           className={
-            dmSans.className + " text-2xl md:text-3xl font-medium min-h-[128px] md:min-h-[72px]"
+            dmSans.className + " text-2xl md:text-3xl font-medium min-h-[72px]"
           }
         >
           Creating premium digital products that are&nbsp;
