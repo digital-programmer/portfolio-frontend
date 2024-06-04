@@ -94,7 +94,7 @@ export default function Home() {
             {"Recent Projects"}
           </div>
           <Link
-            href={"/blog"}
+            href={"/portfolio"}
             className="text-accent-500 dark:text-accent-500 font-medium hover:underline flex items-center gap-1.5 text-sm md:text-base"
           >
             View all

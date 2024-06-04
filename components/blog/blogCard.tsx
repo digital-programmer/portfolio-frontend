@@ -42,13 +42,13 @@ export default function BlogCard() {
       <div className="flex flex-col gap-2 px-4 py-0">
         <div
           className={
-            "text-base md:text-lg text-text-950 dark:text-text-950 font-semibold mb-2 leading-5 md:leading-5 " +
+            "text-base md:text-lg text-text-900 dark:text-text-900 font-semibold mb-2 leading-5 md:leading-5 " +
             dmSans.className
           }
         >
           Become a digital nomad in fjkqnfskj bkf m 2023 afdsf wegareg
         </div>
-        <div className="text-sm text-text-900 dark:text-text-900 font-light leading-5 md:leading-5">
+        <div className="text-sm text-text-950 dark:text-text-950 font-light leading-5 md:leading-5">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
           quas in. Deserunt maiores enim id quod perspiciatis? Ipsum, voluptatem
           id.

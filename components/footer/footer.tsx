@@ -17,23 +17,23 @@ export default function Footer() {
         <div>
           {/* start of footer main content */}
           <div className="px-4 py-8 md:p-8 flex flex-col gap-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 text-text-800 dark:text-text-800 font-light text-sm gap-2 md:gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 text-text-950 dark:text-text-950 font-light text-sm gap-4">
               <div className="flex flex-col md:items-center">
-                <div className="text-text-900 dark:text-text-900 font-semibold mb-1">
+                <div className="text-text-800 dark:text-text-800 font-semibold mb-1">
                   You can mail me at
                 </div>
                 <div>mohandibya.acharya@gmail.com</div>
               </div>
 
               <div className="flex flex-col md:items-center">
-                <div className="text-text-900 dark:text-text-900 font-semibold mb-1">
+                <div className="text-text-800 dark:text-text-800 font-semibold mb-1">
                   Call me
                 </div>
                 <div>+91 8328935275</div>
               </div>
 
               <div className="flex flex-col md:items-center">
-                <div className="text-text-900 dark:text-text-900 font-semibold mb-1">
+                <div className="text-text-800 dark:text-text-800 font-semibold mb-1">
                   Location
                 </div>
                 <div>Somewhere in India</div>
@@ -41,22 +41,22 @@ export default function Footer() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Start of footer pitch */}
-              <div className="col-span-1 text-text-800 dark:text-text-800 flex text-sm md:justify-center">
+              <div className="col-span-1 text-text-950 dark:text-text-950 flex text-sm md:justify-center">
                 <div className="flex flex-col gap-2 w-[240px] lg:w-[200px]">
-                  <div className="font-semibold text-text-900 dark:text-text-900">
+                  <div className="font-semibold text-text-800 dark:text-text-800">
                     Dedicated to work with passion
                   </div>
                   <div className="font-light">
-                    Radiating creativity. I am software engineer driven by
+                    Radiating creativity. I&apos;m a software engineer driven by
                     pasion and innovation.
                   </div>
                 </div>
               </div>
               {/* End of footer pitch */}
               {/* Start of Portfolio Links and Social Media Links */}
-              <div className="col-span-1 text-text-800 dark:text-text-800 flex gap-12 text-sm md:justify-center">
+              <div className="col-span-1 text-text-950 dark:text-text-950 flex gap-12 text-sm md:justify-center">
                 <div className="flex flex-col gap-2">
-                  <div className="font-semibold text-text-900 dark:text-text-900">
+                  <div className="font-semibold text-text-800 dark:text-text-800">
                     Explore
                   </div>
                   <ul className="font-light flex flex-col gap-1">
@@ -103,7 +103,7 @@ export default function Footer() {
                   </ul>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <div className="font-semibold text-text-900 dark:text-text-900">
+                  <div className="font-semibold text-text-800 dark:text-text-800">
                     Say Hello!
                   </div>
                   <ul className="font-light flex flex-col gap-1">
@@ -156,9 +156,9 @@ export default function Footer() {
               </div>
               {/* End of Portfolio Links and Social Media Links */}
               {/* Start of contact options */}
-              <div className="col-span-1 text-text-800 dark:text-text-800 text-sm flex flex-col md:items-center">
+              <div className="col-span-1 text-text-950 dark:text-text-950 text-sm flex flex-col md:items-center">
                 <div>
-                  <div className="font-semibold text-text-900 dark:text-text-900">
+                  <div className="font-semibold text-text-800 dark:text-text-800">
                     Let&apos;s work together
                   </div>
                   <Link href={"/contact"}>
