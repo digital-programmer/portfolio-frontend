@@ -36,7 +36,7 @@ export default function ContactForm() {
                     <div className="flex gap-4 items-center font-light">
                         <Link href={"/blog"} className="flex gap-[4px] items-center text-accent-500 dark:text-accent-500 underline underline-offset-2">
                             Blog
-                            
+                            <FaArrowUpRightFromSquare size={12}/>
                         </Link>
                         <Link href={"/portfolio"} className="flex gap-[4px] items-center text-accent-500 dark:text-accent-500 underline underline-offset-2">
                             Portfolio
