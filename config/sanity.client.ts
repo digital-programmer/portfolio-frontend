@@ -8,7 +8,6 @@ const config = {
   useCdn: true,
 };
 
-// const client = createClient(config);
-const client = {};
+const client = createClient(config);
 
 export default client;

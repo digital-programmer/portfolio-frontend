@@ -6,6 +6,8 @@ import { DM_Sans } from "next/font/google";
 import BlogSlider from "./slider/blogSlider";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import SkillSlider from "./slider/skillSlider";
+import TechSkillSlider from "./slider/techSkillSlider";
+import ProjectSlider from "./slider/projectSlider";
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export default function Home() {
@@ -70,6 +72,17 @@ export default function Home() {
       <div className="flex flex-col gap-8">
         <div className="flex justify-between items-center">
           <div className="text-text-900 dark:text-text-900 text-xl md:text-2xl font-semibold">
+            {"Tech Stack"}
+          </div>
+        </div>
+        <div>
+          <TechSkillSlider/>
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-8">
+        <div className="flex justify-between items-center">
+          <div className="text-text-900 dark:text-text-900 text-xl md:text-2xl font-semibold">
             {"Recent Posts"}
           </div>
           <Link
@@ -105,7 +118,7 @@ export default function Home() {
           </Link>
         </div>
         <div>
-          <BlogSlider />
+          <ProjectSlider />
         </div>
       </div>
     </div>

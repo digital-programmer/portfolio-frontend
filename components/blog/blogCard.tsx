@@ -4,7 +4,7 @@ import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
-export default function BlogCard() {
+export default function BlogCard({blogData}: {blogData: any}) {
   return (
     <div className="bg-white dark:bg-background-100 flex flex-col gap-2 rounded-lg shadow-inner">
       <div>
