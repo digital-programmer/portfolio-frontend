@@ -105,7 +105,7 @@ export default function ContactForm() {
               htmlFor="about"
               className="block leading-6 text-text-900 font-normal"
             >
-              About
+              What is the purpose?
             </label>
             <div>
               <textarea
@@ -125,11 +125,11 @@ export default function ContactForm() {
           <div className="flex justify-end md:justify-start">
             <button
               type="submit"
-              className="text-text-100 dark:text-text-900 bg-gradient-to-br from-accent-400 to-accent-500 hover:bg-gradient-to-bl focus:outline-none font-medium rounded-2xl text-[12px] md:text-sm px-4 py-2 md:px-5 md:py-2.5 text-center dark:from-accent-500 dark:to-accent-600 flex items-center"
+              className="text-text-100 dark:text-text-900 bg-gradient-to-br from-accent-400 to-accent-500 hover:bg-gradient-to-bl focus:outline-none font-medium rounded-2xl text-[12px] md:text-sm px-4 py-2 md:px-5 md:py-2.5 text-center dark:from-accent-500 dark:to-accent-600 flex items-center gap-2"
               disabled={loading}
             >
-              {loading ? <ButtonLoader /> : ""}
               Submit
+              {loading ? <ButtonLoader /> : ""}
             </button>
           </div>
         </div>
@@ -143,7 +143,7 @@ const ButtonLoader = () => {
     <svg
       aria-hidden="true"
       role="status"
-      className="inline w-4 h-4 me-3 text-white animate-spin"
+      className="inline w-4 h-4 text-white animate-spin"
       viewBox="0 0 100 101"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
