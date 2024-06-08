@@ -35,7 +35,7 @@ export default function Offering() {
                 Product Ownership
               </div>
               <div className="font-light text-sm leading-5 text-text-950 dark:text-text-950">
-                I manage product lifecycles effectively, from ideation to
+                Manage product lifecycles effectively, from ideation to
                 deployment, ensuring alignment with business goals and
                 delivering high-quality products.
               </div>
@@ -95,7 +95,7 @@ export default function Offering() {
                 Quick Learner
               </div>
               <div className="font-light text-sm leading-5 text-text-950 dark:text-text-950">
-                I rapidly adapt to new technologies and environments,
+                Rapidly adapt to new technologies and environments,
                 continuously enhancing my skills to stay at the forefront of
                 industry advancements.
               </div>
