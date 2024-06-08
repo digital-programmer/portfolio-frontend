@@ -2,14 +2,13 @@
 
 import useScrollDirection from "../../custom-hooks/scrollDirection";
 import useWindowResize from "../../custom-hooks/resizeWindow";
-import Image from "next/image";
 import Link from "next/link";
-import logo from "../../public/logo.png";
 import { DM_Sans } from "next/font/google";
 import { useContext, useState } from "react";
 import SideMenuBar from "./sideMenuBar";
 import { usePathname } from "next/navigation";
 import { ThemeContext } from "@/utils/themeContext";
+import { CldImage } from "next-cloudinary";
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 const logoClass =
@@ -26,7 +25,7 @@ const toggleDarkModeBtnClass =
 const activeclassName = ` text-accent-500 dark:text-accent-500`;
 
 export default function Navbar() {
-  const {theme, setTheme} = useContext(ThemeContext);
+  const { theme, setTheme } = useContext(ThemeContext);
   const pathname = usePathname();
   const [isNavOpen, setIsNavOpen] = useState(false);
   const scrollDirection = useScrollDirection();
@@ -85,13 +84,14 @@ export default function Navbar() {
       >
         <Link href="/" scroll={false}>
           <div className="flex items-center gap-2">
-            <Image
-              className="animate-wiggle"
-              src={logo}
-              alt="Logo of digital programmer website"
+            <CldImage
+              src="portfolio/vx8ocbfkxdktxpyuxveu"
               width={36}
               height={36}
+              alt="Logo of digital programmer website"
+              unoptimized={false}
               priority
+              className="animate-wiggle"
             />
             <div className={logoClass}>Digital Programmer</div>
           </div>

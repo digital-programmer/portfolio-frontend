@@ -1,23 +1,23 @@
 "use client";
-
-import Image from "next/image";
-import profilePic from "@/public/portfolio_profile_pic.png";
-import profilePicDark from "@/public/portfolio_profile_pic_dark.png";
 import { useContext } from "react";
 import { ThemeContext } from "@/utils/themeContext";
+import { CldImage } from "next-cloudinary";
+
+const LIGHT_THEME_URL = "portfolio/wxowi4whcvtffq43aqwq";
+const DARK_THEME_URL = "portfolio/nvgqybylvnlcmjjepqll";
 
 export default function ProfilePic() {
   const {theme} = useContext(ThemeContext);
-  const selectedPic = theme === 'light' ? profilePic: profilePicDark;
+  const selectedPic = theme === 'light' ? LIGHT_THEME_URL: DARK_THEME_URL;
   return (
-    <Image
+    <CldImage
       src={selectedPic}
       alt="Logo of digital programmer website"
       width={64}
       height={64}
-      priority
       style={{ objectFit: "contain" }}
       className="rounded-[50%]"
+      priority
     />
   );
 }

@@ -3,10 +3,9 @@
 import { SyntheticEvent } from "react";
 import { DM_Sans } from "next/font/google";
 import Link from "next/link";
-import Image from "next/image";
-import logo from "../../public/logo.png";
 import { usePathname } from "next/navigation";
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { CldImage } from 'next-cloudinary';
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
@@ -46,11 +45,12 @@ export default function SideMenuBar({
               <div>
                 <Link href="/" scroll={false}>
                   <div className="flex items-center gap-2">
-                    <Image
-                      src={logo}
+                    <CldImage
+                      src="portfolio/vx8ocbfkxdktxpyuxveu"
+                      width="32"
+                      height="32"
                       alt="Logo of digital programmer website"
-                      width={32}
-                      height={32}
+                      unoptimized={false}
                       priority
                     />
                     <div className={logoClass}>Digital Programmer</div>
