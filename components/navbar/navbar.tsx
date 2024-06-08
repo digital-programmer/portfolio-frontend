@@ -82,7 +82,7 @@ export default function Navbar() {
       <nav
         className={`h-max flex justify-between lg:max-w-screen-lg lg:mx-auto w-full items-center py-4 md:py-6 md:px-4 px-2 bg-background-50 dark:bg-background-50 transition-[top] duration-300 sticky gap-4 md:gap-6 z-30 ${finalPositionClass}`}
       >
-        <Link href="/" scroll={false}>
+        <Link href="/">
           <div className="flex items-center gap-2">
             <CldImage
               src="portfolio/vx8ocbfkxdktxpyuxveu"
@@ -137,7 +137,6 @@ export default function Navbar() {
                         ? ` ${activeclassName}`
                         : " text-text-800 dark:text-text-800")
                     }
-                    scroll={false}
                   >
                     Home
                   </Link>
@@ -151,7 +150,6 @@ export default function Navbar() {
                         ? ` ${activeclassName}`
                         : " text-text-800 dark:text-text-800")
                     }
-                    scroll={false}
                   >
                     Blog
                   </Link>
@@ -165,7 +163,6 @@ export default function Navbar() {
                         ? ` ${activeclassName}`
                         : " text-text-800 dark:text-text-800")
                     }
-                    scroll={false}
                   >
                     Portfolio
                   </Link>
@@ -179,7 +176,6 @@ export default function Navbar() {
                         ? ` ${activeclassName}`
                         : " text-text-800 dark:text-text-800")
                     }
-                    scroll={false}
                   >
                     Contact
                   </Link>

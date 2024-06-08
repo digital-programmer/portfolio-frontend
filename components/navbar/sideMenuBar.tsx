@@ -43,7 +43,7 @@ export default function SideMenuBar({
           <div className="px-4 pt-8 pb-4 h-full">
             <div className="flex flex-col gap-8 h-full">
               <div>
-                <Link href="/" scroll={false}>
+                <Link href="/">
                   <div className="flex items-center gap-2">
                     <CldImage
                       src="portfolio/vx8ocbfkxdktxpyuxveu"
@@ -61,7 +61,6 @@ export default function SideMenuBar({
                 <li className={fontClass + (pathname === '/' ? ` ${activeclassName}` : ' text-text-800 dark:text-text-800')}>
                   <Link
                     href="/"
-                    scroll={false}
                     className="flex items-center gap-2"
                     onClick={() => onBackdropClick()}
                   >
@@ -85,7 +84,6 @@ export default function SideMenuBar({
                 <li className={fontClass + (pathname === '/portfolio' ? ` ${activeclassName}` : ' text-text-800 dark:text-text-800')}>
                   <Link
                     href="/portfolio"
-                    scroll={false}
                     className="flex items-center gap-2"
                     onClick={() => onBackdropClick()}
                   >
@@ -109,7 +107,6 @@ export default function SideMenuBar({
                 <li className={fontClass + (pathname === '/blog' ? ` ${activeclassName}` : ' text-text-800 dark:text-text-800')}>
                   <Link
                     href="/blog"
-                    scroll={false}
                     className="flex items-center gap-2"
                     onClick={() => onBackdropClick()}
                   >
@@ -133,7 +130,6 @@ export default function SideMenuBar({
                 <li className={fontClass + (pathname === '/contact' ? ` ${activeclassName}` : ' text-text-800 dark:text-text-800')}>
                   <Link
                     href="/contact"
-                    scroll={false}
                     className="flex items-center gap-2"
                     onClick={() => onBackdropClick()}
                   >
