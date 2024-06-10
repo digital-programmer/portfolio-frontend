@@ -1,8 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { SyntheticEvent, useState } from "react";
-import {FaArrowUpRightFromSquare} from "react-icons/fa6";
+import { SyntheticEvent, useState, useRef, useContext } from "react";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
+import { ContactformPayloadType, onContactFormSubmit } from "@/actions/verifyCaptcha";
+import { ThemeContext } from "@/utils/themeContext";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -10,43 +13,65 @@ export default function ContactForm() {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const ref = useRef<HTMLFormElement>(null);
+  const captchaRef = useRef<HCaptcha | null>(null);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const {theme} = useContext(ThemeContext);
 
-  function handleFormSubmit(e: SyntheticEvent) {
+  const onCaptchaChange = (token: string) => setCaptchaToken(token);
+  const onCaptchaExpire = () => setCaptchaToken(null);
+
+  async function handleFormSubmit(e: SyntheticEvent) {
     e.preventDefault();
     if (loading) {
-        return;
+      return;
     }
+    const payLoad: ContactformPayloadType = {
+      captchaToken: captchaToken as string,
+      name,
+      email,
+      message
+    }
+  
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+    const {success, message:responseMessage} = await onContactFormSubmit(payLoad);
+    setLoading(false);
+    if (success) {
       setSubmitted(true);
-    }, 1000);
+    }
+    console.log(responseMessage);
   }
 
   if (submitted) {
     return (
-        <div className="dark:bg-background-100 dark:border dark:border-primary-200 shadow-inner rounded-md h-max p-4 md:p-6 bg-white gap-4 flex lg:mt-[36px]">
-            <div className="text-text-900 dark:text-text-900 flex flex-col gap-4">
-                <div className="text-[12px] md:text-sm text-text-900 dark:text-text-900 font-semibold">
-                    Thanks for contacting me.<br/>
-                    I will reach back to you shortly. 
-                </div>
-                <div className="text-[12px] md:text-sm text-text-900 dark:text-text-900 flex flex-col gap-1">
-                    <div className="font-light">Meanwhile, you can check out -</div>
-                    <div className="flex gap-4 items-center font-light">
-                        <Link href={"/blog"} className="flex gap-[4px] items-center text-accent-500 dark:text-accent-500 underline underline-offset-2">
-                            Blog
-                            <FaArrowUpRightFromSquare size={12}/>
-                        </Link>
-                        <Link href={"/portfolio"} className="flex gap-[4px] items-center text-accent-500 dark:text-accent-500 underline underline-offset-2">
-                            Portfolio
-                            <FaArrowUpRightFromSquare size={12}/>
-                        </Link>
-                    </div>
-                </div>
+      <div className="dark:bg-background-100 dark:border dark:border-primary-200 shadow-inner rounded-md h-max p-4 md:p-6 bg-white gap-4 flex lg:mt-[36px]">
+        <div className="text-text-900 dark:text-text-900 flex flex-col gap-4">
+          <div className="text-[12px] md:text-sm text-text-900 dark:text-text-900 font-semibold">
+            Thanks for contacting me.
+            <br />I will reach back to you shortly.
+          </div>
+          <div className="text-[12px] md:text-sm text-text-900 dark:text-text-900 flex flex-col gap-1">
+            <div className="font-light">Meanwhile, you can check out -</div>
+            <div className="flex gap-4 items-center font-light">
+              <Link
+                href={"/blog"}
+                className="flex gap-[4px] items-center text-accent-500 dark:text-accent-500 underline underline-offset-2"
+              >
+                Blog
+                <FaArrowUpRightFromSquare size={12} />
+              </Link>
+              <Link
+                href={"/portfolio"}
+                className="flex gap-[4px] items-center text-accent-500 dark:text-accent-500 underline underline-offset-2"
+              >
+                Portfolio
+                <FaArrowUpRightFromSquare size={12} />
+              </Link>
             </div>
+          </div>
         </div>
-    )
+      </div>
+    );
   }
 
   return (
@@ -54,7 +79,7 @@ export default function ContactForm() {
       <div className="text-sm md:text-base text-text-900 dark:text-text-900 font-semibold">
         Let&apos;s connect
       </div>
-      <form onSubmit={handleFormSubmit}>
+      <form onSubmit={handleFormSubmit} ref={ref}>
         <div className="dark:bg-background-50 dark:border dark:border-primary-200 shadow-inner rounded-md h-max p-4 md:p-6 bg-white flex flex-col gap-4">
           <div className="text-[12px] md:text-sm flex flex-col gap-1">
             <label
@@ -122,7 +147,14 @@ export default function ContactForm() {
               />
             </div>
           </div>
-          <div className="flex justify-end md:justify-start">
+          <HCaptcha
+            sitekey={"76e0185e-29a4-4e1c-83f0-8368cff42b62"}
+            onVerify={onCaptchaChange}
+            ref={captchaRef}
+            onExpire={onCaptchaExpire}
+            theme={theme}
+          />
+          <div className="flex justify-start">
             <button
               type="submit"
               className="text-text-100 dark:text-text-900 bg-gradient-to-br from-accent-400 to-accent-500 hover:bg-gradient-to-bl focus:outline-none font-medium rounded-2xl text-[12px] md:text-sm px-4 py-2 md:px-5 md:py-2.5 text-center dark:from-accent-500 dark:to-accent-600 flex items-center gap-2"
