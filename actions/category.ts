@@ -1,3 +1,5 @@
+"use server";
+
 import client from "@/config/sanity.client";
 
 export default async function fetchCategories() {

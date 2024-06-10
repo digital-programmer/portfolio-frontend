@@ -4,7 +4,7 @@ import Link from "next/link";
 import { SyntheticEvent, useState, useRef, useContext } from "react";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
-import { ContactformPayloadType, onContactFormSubmit } from "@/actions/verifyCaptcha";
+import { ContactformPayloadType, onContactFormSubmit } from "@/actions/formSubmission";
 import { ThemeContext } from "@/utils/themeContext";
 
 export default function ContactForm() {
@@ -17,6 +17,7 @@ export default function ContactForm() {
   const captchaRef = useRef<HCaptcha | null>(null);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const {theme} = useContext(ThemeContext);
+  const sitekey = process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY;
 
   const onCaptchaChange = (token: string) => setCaptchaToken(token);
   const onCaptchaExpire = () => setCaptchaToken(null);
@@ -24,6 +25,10 @@ export default function ContactForm() {
   async function handleFormSubmit(e: SyntheticEvent) {
     e.preventDefault();
     if (loading) {
+      return;
+    }
+    if (!captchaToken) {
+      console.log("USER not verified");
       return;
     }
     const payLoad: ContactformPayloadType = {
@@ -130,7 +135,7 @@ export default function ContactForm() {
               htmlFor="about"
               className="block leading-6 text-text-900 font-normal"
             >
-              What is the purpose?
+              Message
             </label>
             <div>
               <textarea
@@ -148,7 +153,7 @@ export default function ContactForm() {
             </div>
           </div>
           <HCaptcha
-            sitekey={"76e0185e-29a4-4e1c-83f0-8368cff42b62"}
+            sitekey={sitekey as string}
             onVerify={onCaptchaChange}
             ref={captchaRef}
             onExpire={onCaptchaExpire}
