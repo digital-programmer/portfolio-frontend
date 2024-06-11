@@ -6,6 +6,7 @@ import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { ContactformPayloadType, onContactFormSubmit } from "@/actions/formSubmission";
 import { ThemeContext } from "@/utils/themeContext";
+const sitekey = process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY;
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -17,7 +18,6 @@ export default function ContactForm() {
   const captchaRef = useRef<HCaptcha | null>(null);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const {theme} = useContext(ThemeContext);
-  const sitekey = process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY;
 
   const onCaptchaChange = (token: string) => setCaptchaToken(token);
   const onCaptchaExpire = () => setCaptchaToken(null);
@@ -28,7 +28,7 @@ export default function ContactForm() {
       return;
     }
     if (!captchaToken) {
-      console.log("USER not verified");
+      console.log("User not verified");
       return;
     }
     const payLoad: ContactformPayloadType = {
@@ -44,7 +44,6 @@ export default function ContactForm() {
     if (success) {
       setSubmitted(true);
     }
-    console.log(responseMessage);
   }
 
   if (submitted) {
@@ -158,6 +157,7 @@ export default function ContactForm() {
             ref={captchaRef}
             onExpire={onCaptchaExpire}
             theme={theme}
+            size="invisible"
           />
           <div className="flex justify-start">
             <button

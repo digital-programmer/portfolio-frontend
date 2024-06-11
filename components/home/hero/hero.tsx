@@ -40,8 +40,6 @@ export default function Hero() {
             Get In Touch
           </button>
         </Link>
-
-
         <DownloadResumeBtn/>
       </div>
     </div>
