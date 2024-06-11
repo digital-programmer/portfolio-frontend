@@ -1,12 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { SyntheticEvent, useState, useRef, useContext } from "react";
+import { SyntheticEvent, useState, useRef, useContext, useEffect } from "react";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { ContactformPayloadType, onContactFormSubmit } from "@/actions/formSubmission";
 import { ThemeContext } from "@/utils/themeContext";
+import { ToastOptions, ToastTransition, toast } from "react-toastify";
+
 const sitekey = process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY;
+
+interface ExecuteResponse {
+  response: string;
+  key: string;
+}
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -16,35 +23,51 @@ export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const ref = useRef<HTMLFormElement>(null);
   const captchaRef = useRef<HCaptcha | null>(null);
-  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const {theme} = useContext(ThemeContext);
 
-  const onCaptchaChange = (token: string) => setCaptchaToken(token);
-  const onCaptchaExpire = () => setCaptchaToken(null);
+  function notify({success, message}: {success:boolean, message: string}) {
+    const options: ToastOptions<any> = {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+      theme,
+    }
+    if (success) {
+      toast.success(message, options);
+    } else {
+      toast.error(message, options);
+    }
+  };
 
   async function handleFormSubmit(e: SyntheticEvent) {
     e.preventDefault();
     if (loading) {
       return;
     }
-    if (!captchaToken) {
-      console.log("User not verified");
-      return;
-    }
-    const payLoad: ContactformPayloadType = {
-      captchaToken: captchaToken as string,
-      name,
-      email,
-      message
-    }
-  
-    setLoading(true);
-    const {success, message:responseMessage} = await onContactFormSubmit(payLoad);
-    setLoading(false);
-    if (success) {
-      setSubmitted(true);
-    }
+    try {
+      setLoading(true);
+      const {response} = await captchaRef.current?.execute({ async: true }) as ExecuteResponse;
+      const payLoad: ContactformPayloadType = {
+        captchaToken: response,
+        name,
+        email,
+        message
+      };
+      const formResponse = await onContactFormSubmit(payLoad);
+      if (formResponse.success) {
+        setSubmitted(true);
+      }
+      notify(formResponse);
+    } catch(err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }    
   }
+
 
   if (submitted) {
     return (
@@ -153,9 +176,7 @@ export default function ContactForm() {
           </div>
           <HCaptcha
             sitekey={sitekey as string}
-            onVerify={onCaptchaChange}
             ref={captchaRef}
-            onExpire={onCaptchaExpire}
             theme={theme}
             size="invisible"
           />
