@@ -52,7 +52,7 @@ export const submitFormData = async (payLoad: ContactformPayloadType) => {
   if (json.success) {
     return {
       success: true,
-      message: "Thank you for reaching out to us.",
+      message: "Thank you for reaching out.",
     };
   } else {
     return {
