@@ -62,6 +62,7 @@ export default function ContactForm() {
       }
       notify(formResponse);
     } catch(err) {
+      notify({success: false, message: "Something went wrong. Please refresh and try again!"})
       console.error(err);
     } finally {
       setLoading(false);
