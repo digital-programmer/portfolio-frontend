@@ -31,7 +31,7 @@ export default async function Blog() {
               size={16}
             />
             <div className="text-[9px] md:text-[12px] leading-[10px] md:leading-3 font-light text-text-950 dark:text-text-950 text-center">
-              Low Level Design
+              CS Concepts
             </div>
           </div>
           <div className="flex items-center gap-1 md:gap-1.5 border border-primary-100 dark:border-primary-200 rounded-md py-1 px-2 justify-center shadow-inner">
@@ -40,7 +40,7 @@ export default async function Blog() {
               size={16}
             />
             <div className="text-[9px] md:text-[12px] leading-[10px] md:leading-3 font-light text-text-950 dark:text-text-950 text-center">
-              High Level Design
+              Data Science
             </div>
           </div>
           <div className="flex items-center gap-1 md:gap-1.5 border border-primary-100 dark:border-primary-200 rounded-md py-1 px-2 justify-center shadow-inner">
@@ -49,8 +49,7 @@ export default async function Blog() {
               size={16}
             />
             <div className="text-[9px] md:text-[12px] leading-[10px] md:leading-3 font-light text-text-950 dark:text-text-950 text-center">
-              
-              Core Concepts
+              Design 
             </div>
           </div>
         </div>

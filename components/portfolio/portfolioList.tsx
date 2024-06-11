@@ -2,7 +2,7 @@ import PortFolioCard from "./portfolioCard";
 
 export default function PortFolioList({ projects }: { projects: Array<any> }) {
   if (projects.length === 0) {
-    return <div>No Projects Available. Coming soon!</div>;
+    return <div className="text-[12px] md:text-sm">No Projects Available. Coming soon!</div>;
   }
   return (
     <div className="grid grid-cols-1 gap-8 md:grid-cols-2">

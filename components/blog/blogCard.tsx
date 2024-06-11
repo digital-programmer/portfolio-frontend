@@ -12,14 +12,13 @@ export default function BlogCard({blogData}: {blogData: any}) {
   const imageUrl = urlFor(coverImage).url();
   return (
     <div className="bg-white dark:bg-background-100 flex flex-col gap-2 rounded-lg shadow-inner">
-      <div>
+      <div className="h-64 relative">
         <Image
           src={imageUrl}
           alt={coverImage.alt}
-          style={{ objectFit: "contain" }}
-          width={900}
-          height={300}
+          fill
           className="rounded-t-lg"
+          priority
         />
       </div>
       <div className="flex justify-between px-4 py-2 gap-2">
@@ -49,7 +48,7 @@ export default function BlogCard({blogData}: {blogData: any}) {
       </div>
       <div className="p-4">
         <Link href={`/blog/${slug.current}`}>
-          <button className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium outline-none focus:outline-none w-max border border-accent-500 rounded-lg text-accent-500 dark:text-accent-500 hover:border-accent-600 dark:hover:border-accent-600 hover:text-accent-600 dark:hover:text-accent-600 gap-2">
+          <button className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium outline-none focus:outline-none w-max border border-accent-500 rounded-lg text-accent-500 dark:text-accent-500 hover:border-accent-400 dark:hover:border-accent-400 hover:text-accent-400 dark:hover:text-accent-400 gap-2">
               Read full blog
               <FaArrowUpRightFromSquare size={12}/>
           </button>

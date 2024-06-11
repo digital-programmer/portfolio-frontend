@@ -35,7 +35,7 @@ export default function Hero() {
         <Link href={"/contact"} className="w-max inline-block">
           <button
             type="button"
-            className="text-text-50 dark:text-text-950 bg-gradient-to-br from-accent-400 to-accent-500 hover:bg-gradient-to-bl focus:outline-none font-medium rounded-2xl text-[12px] md:text-sm px-4 py-2 md:px-6 md:py-2.5 text-center dark:from-accent-500 dark:to-accent-600 flex items-center"
+            className="text-text-50 dark:text-text-950 bg-gradient-to-br from-accent-400 to-accent-500 hover:bg-gradient-to-bl focus:outline-none font-medium rounded-lg text-[12px] md:text-sm px-4 py-2 md:px-6 md:py-2.5 text-center dark:from-accent-500 dark:to-accent-600 flex items-center"
           >
             Get In Touch
           </button>

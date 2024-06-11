@@ -35,7 +35,7 @@ export default function RootLayout({
           <main className="lg:max-w-screen-md lg:mx-auto w-full text-text-900 dark:text-text-900 text-sm md:text-base">
             <div className="min-h-screen flex flex-col p-4 md:p-8">
               {children}
-              <ToastContainer className="p-2"/>
+              <ToastContainer className="text-sm"/>
             </div>
           </main>
           <Footer/>

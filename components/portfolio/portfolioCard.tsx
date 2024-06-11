@@ -7,16 +7,14 @@ const dmSans = DM_Sans({ subsets: ["latin"] });
 export default function PortFolioCard({projectData}: {projectData: any}) {
   return (
     <div className="bg-white dark:bg-background-100 flex flex-col gap-2 rounded-lg shadow-inner">
-      <div>
+      <div className="h-64 relative">
         <Image
           src={
             "https://images.pexels.com/photos/24797332/pexels-photo-24797332/free-photo-of-people-are-like-baggage.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load"
           }
           alt={"image alts"}
-          style={{ objectFit: "contain" }}
           priority
-          width={900}
-          height={300}
+          fill
           className="rounded-t-lg"
         />
       </div>
@@ -55,7 +53,7 @@ export default function PortFolioCard({projectData}: {projectData: any}) {
         </div>
       </div>
       <div className="p-4">
-        <button className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium outline-none focus:outline-none w-max border border-accent-500 rounded-lg text-accent-500 dark:text-accent-500 hover:border-accent-600 dark:hover:border-accent-600 hover:text-accent-600 dark:hover:text-accent-600 gap-2">
+        <button className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium outline-none focus:outline-none w-max border border-accent-500 rounded-lg text-accent-500 dark:text-accent-500 hover:border-accent-400 dark:hover:border-accent-400 hover:text-accent-400 dark:hover:text-accent-400 gap-2">
             Read full blog
             <FaArrowUpRightFromSquare size={12}/>
         </button>

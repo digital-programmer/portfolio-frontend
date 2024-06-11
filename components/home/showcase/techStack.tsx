@@ -34,7 +34,7 @@ import {
         </div>
         <div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-white dark:bg-background-100 p-4 rounded-lg flex flex-col gap-4 h-max">
+            <div className="bg-white dark:bg-background-100 p-4 rounded-lg flex flex-col gap-4 h-max shadow-inner">
               <div className="text-base font-semibold">Frontend</div>
               <div className="flex items-center flex-wrap gap-4 opacity-50">
                 <div>
@@ -60,7 +60,7 @@ import {
                 </div>
               </div>
             </div>
-            <div className="bg-white dark:bg-background-100 p-4 rounded-lg flex flex-col gap-2.5 h-max">
+            <div className="bg-white dark:bg-background-100 p-4 rounded-lg flex flex-col gap-2.5 h-max shadow-inner">
               <div className="text-base font-semibold">Backend</div>
               <div className="flex items-center flex-wrap gap-4 opacity-50">
                 <div>
@@ -86,7 +86,7 @@ import {
                 </div>
               </div>
             </div>
-            <div className="bg-white dark:bg-background-100 p-4 rounded-lg flex flex-col gap-2.5 h-max">
+            <div className="bg-white dark:bg-background-100 p-4 rounded-lg flex flex-col gap-2.5 h-max shadow-inner">
               <div className="text-base font-semibold">Tools</div>
               <div className="flex items-center flex-wrap gap-4 opacity-50">
                 <div>

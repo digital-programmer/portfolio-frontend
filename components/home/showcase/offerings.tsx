@@ -21,7 +21,7 @@ export default function Offering() {
             "grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 " + dmSans.className
           }
         >
-          <div className="bg-white dark:bg-background-100 rounded-lg flex flex-col gap-6 px-4 py-6 md:py-8 text-center">
+          <div className="bg-white dark:bg-background-100 rounded-lg flex flex-col gap-6 px-4 py-6 md:py-8 text-center shadow-inner">
             <div className="flex justify-center items-center">
               <div className="bg-accent-100 dark:bg-accent-100 p-4 rounded-xl">
                 <SiAwsorganizations
@@ -41,7 +41,7 @@ export default function Offering() {
               </div>
             </div>
           </div>
-          <div className="bg-white dark:bg-background-100 rounded-lg flex flex-col gap-6 px-4 py-6 md:py-8 text-center">
+          <div className="bg-white dark:bg-background-100 rounded-lg flex flex-col gap-6 px-4 py-6 md:py-8 text-center shadow-inner">
             <div className="flex justify-center items-center">
               <div className="bg-accent-100 dark:bg-accent-100 p-4 rounded-xl">
                 <SiCarrd
@@ -61,7 +61,7 @@ export default function Offering() {
               </div>
             </div>
           </div>
-          <div className="bg-white dark:bg-background-100 rounded-lg flex flex-col gap-6 px-4 py-6 md:py-8 text-center">
+          <div className="bg-white dark:bg-background-100 rounded-lg flex flex-col gap-6 px-4 py-6 md:py-8 text-center shadow-inner">
             <div className="flex justify-center items-center">
               <div className="bg-accent-100 dark:bg-accent-100 p-4 rounded-xl">
                 <SiCilium
@@ -81,7 +81,7 @@ export default function Offering() {
               </div>
             </div>
           </div>
-          <div className="bg-white dark:bg-background-100 rounded-lg flex flex-col gap-6 px-4 py-6 md:py-8 text-center">
+          <div className="bg-white dark:bg-background-100 rounded-lg flex flex-col gap-6 px-4 py-6 md:py-8 text-center shadow-inner">
             <div className="flex justify-center items-center">
               <div className="bg-accent-100 dark:bg-accent-100 p-4 rounded-xl">
                 <SiBreaker

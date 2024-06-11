@@ -28,7 +28,7 @@ export default function ContactForm() {
   function notify({success, message}: {success:boolean, message: string}) {
     const options: ToastOptions<any> = {
       position: "bottom-right",
-      autoClose: 5000,
+      autoClose: false,
       hideProgressBar: true,
       closeOnClick: true,
       pauseOnHover: false,
@@ -62,8 +62,8 @@ export default function ContactForm() {
       }
       notify(formResponse);
     } catch(err) {
-      notify({success: false, message: "Something went wrong. Please refresh and try again!"})
-      console.error(err);
+      notify({success: false, message: `Something went wrong. Please try again!`})
+      console.log(err);
     } finally {
       setLoading(false);
     }    
@@ -184,7 +184,7 @@ export default function ContactForm() {
           <div className="flex justify-start">
             <button
               type="submit"
-              className="text-text-100 dark:text-text-900 bg-gradient-to-br from-accent-400 to-accent-500 hover:bg-gradient-to-bl focus:outline-none font-medium rounded-2xl text-[12px] md:text-sm px-4 py-2 md:px-5 md:py-2.5 text-center dark:from-accent-500 dark:to-accent-600 flex items-center gap-2"
+              className="text-text-100 dark:text-text-900 bg-gradient-to-br from-accent-400 to-accent-500 hover:bg-gradient-to-bl focus:outline-none font-medium rounded-lg text-[12px] md:text-sm px-4 py-2 md:px-5 md:py-2.5 text-center dark:from-accent-500 dark:to-accent-600 flex items-center gap-2"
               disabled={loading}
             >
               Submit

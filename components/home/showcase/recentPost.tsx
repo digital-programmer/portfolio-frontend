@@ -18,7 +18,7 @@ export default async function RecentPost() {
       </div>
     );
   } else {
-    template = <div>No Blogs Available. Coming soon!</div>;
+    template = <div className="text-[12px] md:text-sm">No Blogs Available. Coming soon!</div>;
   }
 
   return (
