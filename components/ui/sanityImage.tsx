@@ -12,13 +12,12 @@ interface Props {
 export const SanityImage = (props: Props) => {
     const { asset, alt, caption } = props;
     const url = urlFor(asset).url();
-    console.log(props)
-;
     return (
-      <figure className='relative h-96'>
+      <figure className='relative h-56 md:h-72'>
         <Image
           src={url}
           alt={alt}
+          className="rounded-lg"
           fill
         />
         {caption && (
@@ -28,4 +27,4 @@ export const SanityImage = (props: Props) => {
         )}
       </figure>
     )
-  }
+}

@@ -17,7 +17,7 @@ export default async function fetchBlogs() {
 export async function fetchBlogBySlug(params: { slug: string }) {
   try {
     const blog = await client.fetch<any>(
-      `*[_type == "blog" && slug.current == $slug] | order(created asc) [0]`,
+      `*[_type == "blog" && slug.current == $slug]{title, excerpt, coverImage, created, content, "categories": *[_type == "category" && references(^._id)].name}[0]`,
       params
     );
     return blog;

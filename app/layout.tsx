@@ -5,7 +5,7 @@ import Footer from "@/components/footer/footer"
 import Navbar from "@/components/navbar/navbar";
 import ThemeProvider from "@/utils/themeContext";
 import type { Metadata } from "next";  
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
