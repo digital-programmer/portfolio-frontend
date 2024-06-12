@@ -5,7 +5,7 @@ import client from "@/config/sanity.client";
 export default async function fetchBlogs() {
   try {
     const blogs = await client.fetch<any[]>(
-      `*[_type == "blog"]{title, excerpt, slug, coverImage, created, "categories": *[_type == "category" && references(^._id)].name}`
+      `*[_type == "blog"] | order(created asc) {title, excerpt, slug, coverImage, created, "categories": *[_type == "category" && references(^._id)].name}`
     );
     return blogs;
   } catch (err) {
@@ -16,8 +16,8 @@ export default async function fetchBlogs() {
 
 export async function fetchBlogBySlug(params: { slug: string }) {
   try {
-    const blog = await client.fetch<any[]>(
-      `*[_type == "blog" && slug.current == $slug][0]`,
+    const blog = await client.fetch<any>(
+      `*[_type == "blog" && slug.current == $slug] | order(created asc) [0]`,
       params
     );
     return blog;

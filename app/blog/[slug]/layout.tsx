@@ -5,8 +5,7 @@ export default function BlogRootLayout({
 }>) {
 
   return (
-    <div>
-        <div>Blog</div>
+    <div className="relative">
         <div>{children}</div>
     </div>
   );
