@@ -18,7 +18,7 @@ export default async function RecentProject() {
       </div>
     );
   } else {
-    template = <div className="text-[12px] md:text-sm">No Projects Available. Coming soon!</div>;
+    template = <div className="text-xs md:text-sm">No Projects Available. Coming soon!</div>;
   }
 
   return (

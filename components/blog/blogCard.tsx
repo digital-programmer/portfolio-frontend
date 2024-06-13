@@ -29,7 +29,7 @@ export default function BlogCard({blogData}: {blogData: any}) {
             </div>
           ))}
         </div>
-        <div className="flex justify-end text-[10px] md:text-[12px] w-32 text-text-900 dark:text-text-900 font-light tracking-tight leading-4 md:leading-5">
+        <div className="flex justify-end text-[10px] md:text-xs w-32 text-text-900 dark:text-text-900 font-light tracking-tight leading-4 md:leading-5">
           {new Date(created).toDateString()}
         </div>
       </div>

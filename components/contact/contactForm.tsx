@@ -74,11 +74,11 @@ export default function ContactForm() {
     return (
       <div className="dark:bg-background-100 dark:border dark:border-primary-200 shadow-inner rounded-md h-max p-4 md:p-6 bg-white gap-4 flex lg:mt-[36px]">
         <div className="text-text-900 dark:text-text-900 flex flex-col gap-4">
-          <div className="text-[12px] md:text-sm text-text-900 dark:text-text-900 font-semibold">
+          <div className="text-xs md:text-sm text-text-900 dark:text-text-900 font-semibold">
             Thanks for contacting me.
             <br />I will reach back to you shortly.
           </div>
-          <div className="text-[12px] md:text-sm text-text-900 dark:text-text-900 flex flex-col gap-1">
+          <div className="text-xs md:text-sm text-text-900 dark:text-text-900 flex flex-col gap-1">
             <div className="font-light">Meanwhile, you can check out -</div>
             <div className="flex gap-4 items-center font-light">
               <Link
@@ -109,7 +109,7 @@ export default function ContactForm() {
       </div>
       <form onSubmit={handleFormSubmit} ref={ref}>
         <div className="dark:bg-background-50 dark:border dark:border-primary-200 shadow-inner rounded-md h-max p-4 md:p-6 bg-white flex flex-col gap-4">
-          <div className="text-[12px] md:text-sm flex flex-col gap-1">
+          <div className="text-xs md:text-sm flex flex-col gap-1">
             <label
               htmlFor="name"
               className="block leading-6 text-text-900 font-normal"
@@ -131,7 +131,7 @@ export default function ContactForm() {
               />
             </div>
           </div>
-          <div className="text-[12px] md:text-sm flex flex-col gap-1">
+          <div className="text-xs md:text-sm flex flex-col gap-1">
             <label
               htmlFor="email"
               className="block leading-6 text-text-900 font-normal"
@@ -153,7 +153,7 @@ export default function ContactForm() {
               />
             </div>
           </div>
-          <div className="text-[12px] md:text-sm flex flex-col gap-1">
+          <div className="text-xs md:text-sm flex flex-col gap-1">
             <label
               htmlFor="about"
               className="block leading-6 text-text-900 font-normal"
@@ -184,7 +184,7 @@ export default function ContactForm() {
           <div className="flex justify-start">
             <button
               type="submit"
-              className="text-text-100 dark:text-text-900 bg-gradient-to-br from-accent-400 to-accent-500 hover:bg-gradient-to-bl focus:outline-none font-medium rounded-lg text-[12px] md:text-sm px-4 py-2 md:px-5 md:py-2.5 text-center dark:from-accent-500 dark:to-accent-600 flex items-center gap-2"
+              className="text-text-100 dark:text-text-900 bg-gradient-to-br from-accent-400 to-accent-500 hover:bg-gradient-to-bl focus:outline-none font-medium rounded-lg text-xs md:text-sm px-4 py-2 md:px-5 md:py-2.5 text-center dark:from-accent-500 dark:to-accent-600 flex items-center gap-2"
               disabled={loading}
             >
               Submit

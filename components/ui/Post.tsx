@@ -1,8 +1,10 @@
 import Image from "next/image";
-import { SanityImage } from "@/components/ui/sanityImage";
+import { SanityImage } from "@/components/ui/postBlocks/sanityImage";
+import CodeBlock from "@/components/ui/postBlocks/codeBlock";
 import { PortableText, type PortableTextReactComponents } from "next-sanity";
 import urlFor from "@/config/sanity.image";
 import { DM_Sans } from "next/font/google";
+import Link from "next/link";
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 const myPortableTextComponents: Partial<PortableTextReactComponents> = {
@@ -10,6 +12,65 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
     image: ({ value }) => {
       return <SanityImage {...value} />;
     },
+    code: ({ value }) => {
+        return <CodeBlock value={value} />
+    },
+  },
+  block: {
+    h1: ({ children }) => (
+      <h1 className="text-5xl font-bold my-4">{children}</h1>
+    ),
+    h2: ({ children }) => (
+      <h2 className="text-4xl font-semibold my-3">{children}</h2>
+    ),
+    h3: ({ children }) => (
+      <h3 className="text-3xl font-medium my-2">{children}</h3>
+    ),
+    h4: ({ children }) => (
+      <h4 className="text-2xl font-medium my-2">{children}</h4>
+    ),
+    h5: ({ children }) => (
+      <h4 className="text-xl font-medium my-2">{children}</h4>
+    ),
+    h6: ({ children }) => (
+      <h4 className="text-lg font-medium my-2">{children}</h4>
+    ),
+    normal: ({ children }) => (
+      <p className="text-base leading-7 my-2">{children}</p>
+    ),
+    blockquote: ({ children }) => (
+      <blockquote className="pl-4 border-l-4 text-primary-600 dark:text-primary-600 border-primary-300 dark:border-primary-300 my-4 text-pretty">{children}</blockquote>
+    ),
+  },
+  marks: {
+    strong: ({ children }) => (
+      <strong className="font-semibold">{children}</strong>
+    ),
+    em: ({ children }) => (
+      <em className="italic">{children}</em>
+    ),
+    link: ({ children, value }) => (
+      <Link href={value.href} className="text-accent-500 dark:text-accent-500 hover:text-accent-400 hover:dark:text-accent-400 underline">
+        {children}
+      </Link>
+    ),
+    code: ({ children }) => <code className="bg-background-100 dark:bg-background-50 rounded p-1 font-mono">{children}</code>,
+  },
+  list: {
+    bullet: ({ children }) => (
+      <ul className="list-disc ml-6 my-2">{children}</ul>
+    ),
+    number: ({ children }) => (
+      <ol className="list-decimal ml-6 my-2">{children}</ol>
+    ),
+  },
+  listItem: {
+    bullet: ({ children }) => (
+      <li className="my-1">{children}</li>
+    ),
+    number: ({ children }) => (
+      <li className="my-1">{children}</li>
+    ),
   },
 };
 
@@ -40,7 +101,7 @@ export default function Post({ blog }: { blog: any }) {
               </div>
             ))}
           </div>
-          <div className="text-[12px] font-light">{new Date(created).toDateString()}</div>
+          <div className="text-xs font-light">{new Date(created).toDateString()}</div>
         </div>
         <div className="flex flex-col gap-4">
           <div

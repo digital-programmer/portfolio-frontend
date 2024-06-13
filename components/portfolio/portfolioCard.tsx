@@ -43,7 +43,7 @@ export default function PortFolioCard({ projectData }: { projectData: any }) {
               );
             })}
         </div>
-        <div className="flex justify-end text-[10px] md:text-[12px] w-32 text-text-900 dark:text-text-900 font-light tracking-tight leading-4 md:leading-5">
+        <div className="flex justify-end text-[10px] md:text-xs w-32 text-text-900 dark:text-text-900 font-light tracking-tight leading-4 md:leading-5">
           {new Date(created).toDateString()}
         </div>
       </div>
@@ -64,7 +64,7 @@ export default function PortFolioCard({ projectData }: { projectData: any }) {
         <Link href={githubLink}>
           <button
             type="button"
-            className="text-text-50 dark:text-text-950 bg-gradient-to-br from-accent-400 to-accent-500 hover:bg-gradient-to-bl focus:outline-none font-medium rounded-lg text-[12px] md:text-sm text-center dark:from-accent-500 dark:to-accent-600 flex items-center gap-2 px-2 py-1 md:px-4 md:py-2"
+            className="text-text-50 dark:text-text-950 bg-gradient-to-br from-accent-400 to-accent-500 hover:bg-gradient-to-bl focus:outline-none font-medium rounded-lg text-xs md:text-sm text-center dark:from-accent-500 dark:to-accent-600 flex items-center gap-2 px-2 py-1 md:px-4 md:py-2"
           >
             Code
             <FaArrowUpRightFromSquare size={16} />
@@ -72,7 +72,7 @@ export default function PortFolioCard({ projectData }: { projectData: any }) {
         </Link>
         {demoLink && (
           <Link href={demoLink}>
-            <button className="inline-flex items-center justify-center px-2.5 py-1 md:px-4 md:py-2 text-[12px] md:text-sm font-medium outline-none focus:outline-none w-max border border-accent-500 rounded-lg text-accent-500 dark:text-accent-500 hover:border-accent-400 dark:hover:border-accent-400 hover:text-accent-400 dark:hover:text-accent-400 gap-2">
+            <button className="inline-flex items-center justify-center px-2.5 py-1 md:px-4 md:py-2 text-xs md:text-sm font-medium outline-none focus:outline-none w-max border border-accent-500 rounded-lg text-accent-500 dark:text-accent-500 hover:border-accent-400 dark:hover:border-accent-400 hover:text-accent-400 dark:hover:text-accent-400 gap-2">
               Demo
               <FaArrowUpRightFromSquare size={16} />
             </button>

@@ -152,7 +152,7 @@ export default function SideMenuBar({
                 </li>
               </ul>
               <div className="flex flex-col gap-1 mt-auto">
-                <div className="text-text-800 dark:text-text-800 text-[12px] font-normal">
+                <div className="text-text-800 dark:text-text-800 text-xs font-normal">
                   Follow me on -
                 </div>
                 <div className="w-max flex gap-3 items-center">

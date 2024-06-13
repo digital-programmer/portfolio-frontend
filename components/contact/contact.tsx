@@ -20,7 +20,7 @@ export default function Contact() {
           >
             Want to hire me?
           </div>
-          <div className="font-light text-text-900 dark:text-text-900 text-[12px] md:text-sm mt-2 mb-4 md:text-center leading-4">
+          <div className="font-light text-text-900 dark:text-text-900 text-xs md:text-sm mt-2 mb-4 md:text-center leading-4">
             Here&apos;s what some of my satisfied clients have to say about my
             work.
           </div>
@@ -30,7 +30,7 @@ export default function Contact() {
                 className="text-accent-500 dark:text-accent-500"
                 size={16}
               />
-              <div className="text-[9px] md:text-[12px] leading-[10px] md:leading-3 font-light text-text-950 dark:text-text-950 text-center">
+              <div className="text-[9px] md:text-xs leading-[10px] md:leading-3 font-light text-text-950 dark:text-text-950 text-center">
                 Dedicated Support
               </div>
             </div>
@@ -39,7 +39,7 @@ export default function Contact() {
                 className="text-accent-500 dark:text-accent-500"
                 size={16}
               />
-              <div className="text-[9px] md:text-[12px] leading-[10px] md:leading-3 font-light text-text-950 dark:text-text-950 text-center">
+              <div className="text-[9px] md:text-xs leading-[10px] md:leading-3 font-light text-text-950 dark:text-text-950 text-center">
                 Quick Resolutions
               </div>
             </div>
@@ -48,7 +48,7 @@ export default function Contact() {
                 className="text-accent-500 dark:text-accent-500"
                 size={16}
               />
-              <div className="text-[9px] md:text-[12px] leading-[10px] md:leading-3 font-light text-text-950 dark:text-text-950 text-center">
+              <div className="text-[9px] md:text-xs leading-[10px] md:leading-3 font-light text-text-950 dark:text-text-950 text-center">
                 Code quality
               </div>
             </div>
@@ -64,7 +64,7 @@ export default function Contact() {
                 Contact details
               </div>
               <div className="text-sm flex flex-col gap-3 md:gap-4">
-                <div className="dark:bg-background-50 dark:border dark:border-primary-200 shadow-inner rounded-md px-4 py-3 text-[12px] md:text-sm bg-white">
+                <div className="dark:bg-background-50 dark:border dark:border-primary-200 shadow-inner rounded-md px-4 py-3 text-xs md:text-sm bg-white">
                   <div className="font-light text-text-900 dark:text-text-900">
                     You can mail me here
                   </div>
@@ -72,7 +72,7 @@ export default function Contact() {
                     mohandibya.acharya@gmail.com
                   </div>
                 </div>
-                <div className="dark:bg-background-50 dark:border dark:border-primary-200 shadow-inner rounded-md px-4 py-3 text-[12px] md:text-sm bg-white">
+                <div className="dark:bg-background-50 dark:border dark:border-primary-200 shadow-inner rounded-md px-4 py-3 text-xs md:text-sm bg-white">
                   <div className="font-light text-text-900 dark:text-text-900">
                     Give me a call on
                   </div>
@@ -80,8 +80,8 @@ export default function Contact() {
                     +91 8328935275
                   </div>
                 </div>
-                <div className="dark:bg-background-50 dark:border dark:border-primary-200 shadow-inner rounded-md px-4 py-3 text-[12px] md:text-sm bg-white">
-                  <div className="font-light text-[12px] md:text-sm text-text-900 dark:text-text-900">
+                <div className="dark:bg-background-50 dark:border dark:border-primary-200 shadow-inner rounded-md px-4 py-3 text-xs md:text-sm bg-white">
+                  <div className="font-light text-xs md:text-sm text-text-900 dark:text-text-900">
                     Location
                   </div>
                   <div className="font-medium text-text-950 dark:text-text-950">

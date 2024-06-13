@@ -184,7 +184,7 @@ export default function Footer() {
         </div>
 
         {/* start of copyright content */}
-        <div className="flex flex-col items-center text-[10px] lg:text-[12px] font-light dark:font-thin text-text-800 dark:text-text-800 py-1 md:px-4 px-2">
+        <div className="flex flex-col items-center text-[10px] lg:text-xs font-light dark:font-thin text-text-800 dark:text-text-800 py-1 md:px-4 px-2">
           <div className="flex gap-1 items-center">
             Copyright &copy; {year} - Digital Programmer
           </div>

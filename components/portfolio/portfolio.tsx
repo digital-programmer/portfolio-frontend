@@ -23,7 +23,7 @@ export default async function Portfolio() {
           >
             Showcase of work
           </div>
-          <div className="font-light text-text-900 dark:text-text-900 text-[12px] md:text-sm leading-4">
+          <div className="font-light text-text-900 dark:text-text-900 text-xs md:text-sm leading-4">
             With over {experienceInYears} years of experience, showcasing my
             journey as a Full Stack Developer. Discover my projects and skills
             here.
@@ -31,7 +31,7 @@ export default async function Portfolio() {
           <Link href={"https://www.github.com/digital-programmer"} target="_blank" className="w-max inline-block mt-2">
             <button
               type="button"
-              className="text-text-50 dark:text-text-950 bg-gradient-to-br from-accent-400 to-accent-500 hover:bg-gradient-to-bl focus:outline-none font-medium rounded-lg text-[12px] md:text-sm text-center dark:from-accent-500 dark:to-accent-600 flex items-center gap-2 px-2 py-1 md:px-4 md:py-2"
+              className="text-text-50 dark:text-text-950 bg-gradient-to-br from-accent-400 to-accent-500 hover:bg-gradient-to-bl focus:outline-none font-medium rounded-lg text-xs md:text-sm text-center dark:from-accent-500 dark:to-accent-600 flex items-center gap-2 px-2 py-1 md:px-4 md:py-2"
             >
               <span>Github</span>
               <FaGithub size={24}/>
