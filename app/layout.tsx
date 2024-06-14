@@ -43,7 +43,7 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
       {/* Gtag */}
-      <GoogleAnalytics gaId="GTM-P9CRX7LZ" />
+      <GoogleAnalytics gaId="G-L5W36PRZ7J" />
     </html>
   );
 }
