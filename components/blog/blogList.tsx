@@ -1,7 +1,7 @@
 import fetchBlogs from "@/actions/blog";
 import BlogCard from "./blogCard";
 import { Suspense } from "react";
-import PageLoader from "../ui/loader";
+import {SectionLoader} from "../ui/loader";
 
 export default async function BlogList() {
   const blogs = await fetchBlogs();
@@ -9,7 +9,7 @@ export default async function BlogList() {
     return <div className="text-xs md:text-sm">No Blogs Available. Coming soon!</div>;
   }
   return (
-    <Suspense fallback={<PageLoader/>}>
+    <Suspense fallback={<SectionLoader message="Fetching blog posts..."/>}>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         {blogs.map((blog, index) => (
           <div key={"blog_" + index}>

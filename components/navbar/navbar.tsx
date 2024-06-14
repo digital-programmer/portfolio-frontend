@@ -89,7 +89,6 @@ export default function Navbar() {
               width={36}
               height={36}
               alt="Logo of digital programmer website"
-              unoptimized={false}
               priority
               className="animate-wiggle"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

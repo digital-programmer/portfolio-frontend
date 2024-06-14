@@ -2,6 +2,8 @@ import Link from "next/link";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import fetchBlogs from "@/actions/blog";
 import BlogCard from "@/components/blog/blogCard";
+import { Suspense } from "react";
+import { SectionLoader } from "@/components/ui/loader";
 
 export default async function RecentPost() {
   const blogs = await fetchBlogs();
@@ -18,7 +20,9 @@ export default async function RecentPost() {
       </div>
     );
   } else {
-    template = <div className="text-xs md:text-sm">No Blogs Available. Coming soon!</div>;
+    template = (
+      <div className="text-xs md:text-sm">No Blogs Available. Coming soon!</div>
+    );
   }
 
   return (
@@ -41,7 +45,9 @@ export default async function RecentPost() {
         )}
       </div>
       <div>
-        <div>{template}</div>
+        <Suspense fallback={<SectionLoader message="Fetching blog posts..." />}>
+          <div>{template}</div>
+        </Suspense>
       </div>
     </div>
   );

@@ -3,9 +3,11 @@ import Link from "next/link";
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { FaClock, FaBolt, FaHandSparkles } from "react-icons/fa";
 import ContactForm from "./contactForm";
+import { Suspense } from "react";
+import { SectionLoader } from "../ui/loader";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
-export default function Contact() {
+export default async function Contact() {
 
   return (
     <div>
@@ -138,7 +140,9 @@ export default function Contact() {
           {/* start of contact form */}
           <div className="col-span-1 md:col-span-3 order-1 md:order-2">
             <div className="flex flex-col gap-2 md:gap-3 h-full">
-              <ContactForm/>
+              <Suspense fallback={<SectionLoader message="Loading form..."/>}>
+                <ContactForm/>
+              </Suspense>
             </div>
           </div>
           {/* end of contact form */}

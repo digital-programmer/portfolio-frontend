@@ -2,10 +2,12 @@ import Link from "next/link";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import fetchProjects from "@/actions/project";
 import PortFolioCard from "@/components/portfolio/portfolioCard";
+import { Suspense } from "react";
+import { SectionLoader } from "@/components/ui/loader";
 
 export default async function RecentProject() {
   const projects = await fetchProjects();
-  const projectsExist = projects.length > 0;
+  const projectsExist = projects?.length > 0;
   let template;
   if (projectsExist) {
     template = (
@@ -18,7 +20,11 @@ export default async function RecentProject() {
       </div>
     );
   } else {
-    template = <div className="text-xs md:text-sm">No Projects Available. Coming soon!</div>;
+    template = (
+      <div className="text-xs md:text-sm">
+        No Projects Available. Coming soon!
+      </div>
+    );
   }
 
   return (
@@ -41,7 +47,9 @@ export default async function RecentProject() {
         )}
       </div>
       <div>
-        <div>{template}</div>
+        <Suspense fallback={<SectionLoader message="Fetching projects..." />}>
+          <div>{template}</div>
+        </Suspense>
       </div>
     </div>
   );

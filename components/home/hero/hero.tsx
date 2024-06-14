@@ -14,7 +14,7 @@ export default function Hero() {
 
       <div
         className={
-          dmSans.className + " text-2xl md:text-3xl font-medium min-h-[72px]"
+          dmSans.className + " text-3xl md:text-4xl font-semibold min-h-[72px]"
         }
       >
         Creating premium digital products that are&nbsp;

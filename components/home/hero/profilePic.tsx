@@ -12,12 +12,11 @@ export default function ProfilePic() {
   return (
     <CldImage
       src={selectedPic}
-      alt="Logo of digital programmer website"
+      alt="Profile picture of digital programmer"
       width={64}
       height={64}
       style={{ objectFit: "contain" }}
       className="rounded-[50%]"
-      priority
       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
     />
   );
