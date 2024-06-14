@@ -8,14 +8,14 @@ export default function useDarkMode() {
     useEffect(() => {
         const currentTheme = localStorage.getItem("dibyamohan_portfolio_theme");
         const root = window.document.documentElement;
-        if (currentTheme === "light") {
+        if (currentTheme === "dark") {
             setTheme(currentTheme);
-            localStorage.setItem("dibyamohan_portfolio_theme", "light");
-            root.classList.remove('dark');
-        } else {
-            setTheme("dark");
             localStorage.setItem("dibyamohan_portfolio_theme", "dark");
             root.classList.add('dark');
+        } else {
+            setTheme("light");
+            localStorage.setItem("dibyamohan_portfolio_theme", "light");
+            root.classList.remove('dark');
         }
     }, [])
 
