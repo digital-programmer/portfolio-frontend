@@ -42,6 +42,7 @@ export default function RootLayout({
           <Footer/>
         </ThemeProvider>
       </body>
+      {/* Gtag */}
       <GoogleAnalytics gaId="GTM-P9CRX7LZ" />
     </html>
   );
