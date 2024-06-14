@@ -1,4 +1,3 @@
-import fetchBlogs from "@/actions/blog";
 import BlogList from "./blogList";
 
 import { DM_Sans } from "next/font/google";
@@ -8,7 +7,6 @@ import { MdSettingsSystemDaydream } from "react-icons/md";
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export default async function Blog() {
-  const blogs = await fetchBlogs();
   return (
     <div className="flex flex-col md:pt-4 gap-8 md:gap-16">
       {/* start of blog pitch */}
@@ -65,7 +63,7 @@ export default async function Blog() {
           Latest Blogs
         </div>
         <div className="mt-8 mb-2">
-          <BlogList blogs={blogs} />
+          <BlogList />
         </div>
       </div>
     </div>
