@@ -90,7 +90,7 @@ export default function Post({ blog }: { blog: any }) {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
-      <div className="md:max-w-screen-sm md:mx-auto w-full bg-white dark:bg-background-100 shadow-inner rounded-md p-4 flex flex-col gap-6">
+      <div className="md:max-w-screen-sm md:mx-auto w-full bg-white dark:bg-background-100 shadow-inner rounded-md p-4 flex flex-col gap-6 text-wrap">
         <div className="flex flex-col gap-4 md:gap-6 md:flex-row md:justify-between">
           <div className="flex items-center gap-1 flex-wrap text-accent-500 dark:text-accent-500">
             {categories.map((item: string, index: number) => (
@@ -123,7 +123,7 @@ export default function Post({ blog }: { blog: any }) {
           </div>
         </div>
       </div>
-      <article className="md:max-w-screen-sm md:mx-auto w-full bg-white dark:bg-background-100 shadow-inner px-4 pt-2 pb-4 rounded-md break-words tracking-normal text-pretty">
+      <article className="md:max-w-screen-sm md:mx-auto w-full bg-white dark:bg-background-100 shadow-inner px-4 pt-2 pb-4 rounded-md break-words tracking-normal text-wrap">
         <PortableText value={content} components={myPortableTextComponents} />
       </article>
     </div>
