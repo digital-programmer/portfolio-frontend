@@ -9,7 +9,7 @@ export function SectionLoader({message}: {message: string}) {
           {message}
         </h2>
         <p className="text-center text-text-900 dark:text-text-900 text-xs font-light">
-          This may take a few seconds, <br/>please don't close this page.
+          This may take a few seconds, <br/>please don&apos;t close this page.
         </p>
       </div>
     </div>
