@@ -8,7 +8,7 @@ export default function BlogRootLayout({
 }>) {
   return (
     <div>
-      <div className="mb-4 md:mb-8">
+      <div className="mb-4 md:mb-8 inline-block">
         <Link
           href={"/blog"}
           className="text-sm text-accent-500 dark:text-accent-500 font-medium hover:underline flex items-center gap-1.5"
