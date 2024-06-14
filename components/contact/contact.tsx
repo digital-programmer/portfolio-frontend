@@ -26,7 +26,7 @@ export default async function Contact() {
             Here&apos;s what some of my satisfied clients have to say about my
             work.
           </div>
-          <div className="flex items-center md:justify-center gap-4">
+          <div className="flex items-center md:justify-center gap-2 sm:gap-4">
             <div className="flex items-center gap-1 border border-primary-100 dark:border-primary-200 rounded-md py-1 px-2 justify-center shadow-inner">
               <FaClock
                 className="text-accent-500 dark:text-accent-500"

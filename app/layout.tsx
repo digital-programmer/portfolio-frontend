@@ -33,7 +33,7 @@ export default function RootLayout({
         <ThemeProvider>
           <Navbar />
           <main className="lg:max-w-screen-md lg:mx-auto w-full text-text-900 dark:text-text-900 text-sm md:text-base">
-            <div className="min-h-screen flex flex-col p-4 md:p-8">
+            <div className="h-max flex flex-col p-4 md:p-8">
               {children}
               <ToastContainer className="text-sm"/>
             </div>
