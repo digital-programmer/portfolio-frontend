@@ -5,10 +5,10 @@ import { FaClock, FaBolt, FaHandSparkles } from "react-icons/fa";
 import ContactForm from "./contactForm";
 import { Suspense } from "react";
 import { SectionLoader } from "../ui/loader";
+import ContactPoint from "./contactPoint";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 export default async function Contact() {
-
   return (
     <div>
       <div className="mb-2">
@@ -66,30 +66,15 @@ export default async function Contact() {
                 Contact details
               </div>
               <div className="text-sm flex flex-col gap-3 md:gap-4">
-                <div className="dark:bg-background-50 dark:border dark:border-primary-200 shadow-inner rounded-md px-4 py-3 text-xs md:text-sm bg-white">
-                  <div className="font-light text-text-900 dark:text-text-900">
-                    You can mail me here
-                  </div>
-                  <div className="font-medium text-text-950 dark:text-text-950">
-                    mohandibya.acharya@gmail.com
-                  </div>
-                </div>
-                <div className="dark:bg-background-50 dark:border dark:border-primary-200 shadow-inner rounded-md px-4 py-3 text-xs md:text-sm bg-white">
-                  <div className="font-light text-text-900 dark:text-text-900">
-                    Give me a call on
-                  </div>
-                  <div className="font-medium text-text-950 dark:text-text-950">
-                    +91 8328935275
-                  </div>
-                </div>
-                <div className="dark:bg-background-50 dark:border dark:border-primary-200 shadow-inner rounded-md px-4 py-3 text-xs md:text-sm bg-white">
-                  <div className="font-light text-xs md:text-sm text-text-900 dark:text-text-900">
-                    Location
-                  </div>
-                  <div className="font-medium text-text-950 dark:text-text-950">
-                    Somewhere in India
-                  </div>
-                </div>
+                <ContactPoint
+                  label={"You can mail me here"}
+                  data={"mohandibya.acharya@gmail.com"}
+                />
+                <ContactPoint
+                  label={"Give me a call on"}
+                  data={"+91 8328935275"}
+                />
+                <ContactPoint label={"Location"} data={"Somewhere in India"} />
               </div>
             </div>
             {/* end of contact details */}
@@ -140,9 +125,7 @@ export default async function Contact() {
           {/* start of contact form */}
           <div className="col-span-1 md:col-span-3 order-1 md:order-2">
             <div className="flex flex-col gap-2 md:gap-3 h-full">
-              <Suspense fallback={<SectionLoader message="Loading form..."/>}>
-                <ContactForm/>
-              </Suspense>
+              <ContactForm />
             </div>
           </div>
           {/* end of contact form */}
