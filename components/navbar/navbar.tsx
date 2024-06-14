@@ -92,6 +92,7 @@ export default function Navbar() {
               unoptimized={false}
               priority
               className="animate-wiggle"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
             <div className={logoClass}>Digital Programmer</div>
           </div>

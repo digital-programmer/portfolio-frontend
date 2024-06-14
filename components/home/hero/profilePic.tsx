@@ -18,6 +18,7 @@ export default function ProfilePic() {
       style={{ objectFit: "contain" }}
       className="rounded-[50%]"
       priority
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
     />
   );
 }

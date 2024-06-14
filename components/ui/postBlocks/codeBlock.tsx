@@ -11,13 +11,7 @@ const CodeBlock = ({ value }: Props) => {
     return (
       <SyntaxHighlighter
         style={tomorrowNightBright}
-        customStyle={{
-          padding: '1rem',
-          marginBottom: '2rem',
-          fontSize: '14px',
-          borderRadius: '6px',
-          marginTop: '2rem',
-        }}
+        className="my-2 md:my-4 rounded-md text-sm md:text-base"
       >
         {code}
       </SyntaxHighlighter>

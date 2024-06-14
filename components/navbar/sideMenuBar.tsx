@@ -52,6 +52,7 @@ export default function SideMenuBar({
                       alt="Logo of digital programmer website"
                       unoptimized={false}
                       priority
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                     <div className={logoClass}>Digital Programmer</div>
                   </div>

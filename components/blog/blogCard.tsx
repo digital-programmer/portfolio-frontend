@@ -19,6 +19,7 @@ export default function BlogCard({blogData}: {blogData: any}) {
           fill
           className="rounded-t-lg"
           priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
       <div className="flex justify-between px-4 py-2 gap-2">
@@ -42,7 +43,7 @@ export default function BlogCard({blogData}: {blogData: any}) {
         >
           {title}
         </div>
-        <div className="text-sm text-text-950 dark:text-text-950 font-light leading-5 md:leading-5">
+        <div className="text-sm text-text-950 dark:text-text-950 font-light leading-5 md:leading-5 text-pretty">
           {excerpt}
         </div>
       </div>
