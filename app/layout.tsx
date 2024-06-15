@@ -8,6 +8,7 @@ import type { Metadata } from "next";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -41,9 +42,14 @@ export default function RootLayout({
           </main>
           <Footer/>
         </ThemeProvider>
+        {/* start of Gtag */}
+        <GoogleAnalytics gaId="G-L5W36PRZ7J" />
+        {/* end of Gtag */}
+        {/* start of page insights */}
+        <SpeedInsights/>
+        {/* end of page insights */}
       </body>
-      {/* Gtag */}
-      <GoogleAnalytics gaId="G-L5W36PRZ7J" />
+      
     </html>
   );
 }
