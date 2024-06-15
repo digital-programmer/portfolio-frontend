@@ -39,13 +39,13 @@ export default function RootLayout({
           <Footer />
         </ThemeProvider>
         {/* start of Gtag */}
-        <GoogleAnalytics gaId="G-L5W36PRZ7J" />
+        <GoogleAnalytics gaId="G-F4Q0BSSG4D" />
         {/* end of Gtag */}
 
         {/* start of page insights */}
         <SpeedInsights />
         {/* end of page insights */}
-        
+
         {/* start of vercel analytics */}
         <Analytics />
         {/* end of vercel analytics */}
