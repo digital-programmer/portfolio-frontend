@@ -10,7 +10,7 @@ export default async function Blog() {
   return (
     <div className="flex flex-col md:pt-4 gap-8 md:gap-16">
       {/* start of blog pitch */}
-      <div className="flex flex-col md:items-center md:justify-center mb-8 md:mb-12 bg-white py-4 md:py-12 px-3 md:px-4 rounded-md dark:bg-background-50 dark:border dark:border-primary-200 shadow-inner gap-2">
+      <div className="flex flex-col md:items-center md:justify-center mb-8 md:mb-12 bg-white py-4 md:py-12 px-3 md:px-8 rounded-md dark:bg-background-50 dark:border dark:border-primary-200 shadow-inner gap-2">
         <div
           className={
             "text-xl md:text-3xl font-semibold text-text-950 dark:text-text-950 " +

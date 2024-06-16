@@ -7,7 +7,6 @@ import ThemeProvider from "@/utils/themeContext";
 import type { Metadata } from "next";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -38,9 +37,6 @@ export default function RootLayout({
           </main>
           <Footer />
         </ThemeProvider>
-        {/* start of Gtag */}
-        <GoogleAnalytics gaId="G-F4Q0BSSG4D" />
-        {/* end of Gtag */}
 
         {/* start of page insights */}
         <SpeedInsights />
